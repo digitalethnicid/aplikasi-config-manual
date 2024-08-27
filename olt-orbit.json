@@ -1,0 +1,558 @@
+[
+    {
+      "nama_olt": " ",
+      "hsi": " ",
+      "tr069": " "
+    },
+    {
+      "nama_olt": "OL02-NGN-JKT-PSRMOD",
+      "hsi": "3401",
+      "tr069": "3801"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CMGSOD",
+      "hsi": "3402",
+      "tr069": "3802"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CLDKOD",
+      "hsi": "3403",
+      "tr069": "3803"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-PSGROD",
+      "hsi": "3404",
+      "tr069": "3804"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-PCRMOD",
+      "hsi": "3405",
+      "tr069": "3805"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-PSRMOD",
+      "hsi": "3406",
+      "tr069": "3806"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CMIDC2",
+      "hsi": "3407",
+      "tr069": "3807"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-TEBTOD",
+      "hsi": "3408",
+      "tr069": "3808"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-BNTROD",
+      "hsi": "3409",
+      "tr069": "3809"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-JGKSOD",
+      "hsi": "3410",
+      "tr069": "3810"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CIPTOD",
+      "hsi": "3411",
+      "tr069": "3811"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-KMGSOD",
+      "hsi": "3412",
+      "tr069": "3812"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-PJRGOD",
+      "hsi": "3413",
+      "tr069": "3813"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-KLDROD",
+      "hsi": "3414",
+      "tr069": "3814"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-PDMGOD",
+      "hsi": "3415",
+      "tr069": "3815"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-TMNGOD",
+      "hsi": "3416",
+      "tr069": "3816"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CGKROD",
+      "hsi": "3417",
+      "tr069": "3817"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-INDVDC",
+      "hsi": "3418",
+      "tr069": "3818"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-KBGNOD",
+      "hsi": "3419",
+      "tr069": "3819"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-MNCPDC",
+      "hsi": "3420",
+      "tr069": "3820"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CRJGDC",
+      "hsi": "3421",
+      "tr069": "3821"
+    },
+    {
+      "nama_olt": "OL02-NGN-JKT-MNCTDC",
+      "hsi": "3422",
+      "tr069": "3822"
+    },
+    {
+      "nama_olt": "OL03-NGN-JKT-DRSWOD",
+      "hsi": "3423",
+      "tr069": "3823"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-DRSWOD",
+      "hsi": "3424",
+      "tr069": "3824"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-JATIOD",
+      "hsi": "3425",
+      "tr069": "3825"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-KOJAOD",
+      "hsi": "3426",
+      "tr069": "3826"
+    },
+    {
+      "nama_olt": "OL04-NGN-JKT-DRSWOD",
+      "hsi": "3427",
+      "tr069": "3827"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-SNTRDC",
+      "hsi": "3428",
+      "tr069": "3828"
+    },
+    {
+      "nama_olt": "OL02-NGN-JKT-SNTRDC",
+      "hsi": "3429",
+      "tr069": "3829"
+    },
+    {
+      "nama_olt": "OL02-NGN-JKT-JTNGOD",
+      "hsi": "3430",
+      "tr069": "3830"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-KPGDOD",
+      "hsi": "3431",
+      "tr069": "3831"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-JTNGOD",
+      "hsi": "3432",
+      "tr069": "3832"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CRCSOD",
+      "hsi": "3433",
+      "tr069": "3833"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CKNGOD",
+      "hsi": "3434",
+      "tr069": "3834"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-CMPKOD",
+      "hsi": "3435",
+      "tr069": "3835"
+    },
+    {
+      "nama_olt": "OL02-NGN-JKT-DRSWOD",
+      "hsi": "3436",
+      "tr069": "3836"
+    },
+    {
+      "nama_olt": "OL01-NGN-JKT-KLBGOD",
+      "hsi": "3437",
+      "tr069": "3837"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-CLNYOD",
+      "hsi": "3441",
+      "tr069": "3841"
+    },
+    {
+      "nama_olt": "OL02-NGN-BDG-ARCKOD",
+      "hsi": "3442",
+      "tr069": "3842"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-SMRCDC",
+      "hsi": "3443",
+      "tr069": "3843"
+    },
+    {
+      "nama_olt": "OL02-NGN-BDG-CLNYOD",
+      "hsi": "3444",
+      "tr069": "3844"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-ARCKOD",
+      "hsi": "3445",
+      "tr069": "3845"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-CWTROD",
+      "hsi": "3446",
+      "tr069": "3846"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-GDBGOD",
+      "hsi": "3447",
+      "tr069": "3847"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-SORGOD",
+      "hsi": "3448",
+      "tr069": "3848"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-BBUBOD",
+      "hsi": "3449",
+      "tr069": "3849"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-HOLSOD",
+      "hsi": "3450",
+      "tr069": "3850"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-SKSROD",
+      "hsi": "3451",
+      "tr069": "3851"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-KOPOOD",
+      "hsi": "3452",
+      "tr069": "3852"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-SDMTOD",
+      "hsi": "3453",
+      "tr069": "3853"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-HGMHOD",
+      "hsi": "3454",
+      "tr069": "3854"
+    },
+    {
+      "nama_olt": "OL02-NGN-BDG-CJGROD",
+      "hsi": "3455",
+      "tr069": "3855"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-CMHIOD",
+      "hsi": "3456",
+      "tr069": "3856"
+    },
+    {
+      "nama_olt": "OL01-NGN-BDG-CJGROD",
+      "hsi": "3457",
+      "tr069": "3857"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-GMBLDC",
+      "hsi": "3461",
+      "tr069": "3861"
+    },
+    {
+      "nama_olt": "OL02-NGN-SMG-GMBLDC",
+      "hsi": "3462",
+      "tr069": "3862"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-GNUKOD",
+      "hsi": "3463",
+      "tr069": "3863"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-UNESOD",
+      "hsi": "3464",
+      "tr069": "3864"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-KLBTOD",
+      "hsi": "3465",
+      "tr069": "3865"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-PDRGOD",
+      "hsi": "3466",
+      "tr069": "3866"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-GMSROD",
+      "hsi": "3467",
+      "tr069": "3867"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-ERLGOD",
+      "hsi": "3468",
+      "tr069": "3868"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-MTSHOD",
+      "hsi": "3469",
+      "tr069": "3869"
+    },
+    {
+      "nama_olt": "OL02-NGN-SMG-TWNGOD",
+      "hsi": "3470",
+      "tr069": "3870"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-KDPNOD",
+      "hsi": "3471",
+      "tr069": "3871"
+    },
+    {
+      "nama_olt": "OL01-NGN-SMG-TWNGOD",
+      "hsi": "3472",
+      "tr069": "3872"
+    },
+    {
+      "nama_olt": "OL02-NGN-SMG-UNESOD",
+      "hsi": "3473",
+      "tr069": "3873"
+    },
+    {
+      "nama_olt": "OL02-NGN-SMG-GNUKOD",
+      "hsi": "3474",
+      "tr069": "3874"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-KNJROD",
+      "hsi": "3303",
+      "tr069": "3703"
+    },
+    {
+      "nama_olt": "OL02-NGN-SBY-RNKTDC",
+      "hsi": "3304",
+      "tr069": "3704"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-SKDNOD",
+      "hsi": "3305",
+      "tr069": "3705"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-WNKOOD",
+      "hsi": "3306",
+      "tr069": "3706"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-KARHOD",
+      "hsi": "3307",
+      "tr069": "3707"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-TNDSOD",
+      "hsi": "3308",
+      "tr069": "3708"
+    },
+    {
+      "nama_olt": "OL02-NGN-SBY-KRTJOD",
+      "hsi": "3309",
+      "tr069": "3709"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-KRTJOD",
+      "hsi": "3310",
+      "tr069": "3710"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-ITLDDC",
+      "hsi": "3311",
+      "tr069": "3711"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-JMSROD",
+      "hsi": "3312",
+      "tr069": "3712"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-CNDIOD",
+      "hsi": "3313",
+      "tr069": "3713"
+    },
+    {
+      "nama_olt": "OL03-NGN-SBY-RNKTDC",
+      "hsi": "3314",
+      "tr069": "3714"
+    },
+    {
+      "nama_olt": "OL02-NGN-SBY-KNJROD",
+      "hsi": "3315",
+      "tr069": "3715"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-BDRNOD",
+      "hsi": "3316",
+      "tr069": "3716"
+    },
+    {
+      "nama_olt": "OL02-NGN-SBY-SDTIOD",
+      "hsi": "3317",
+      "tr069": "3717"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-SDTIOD",
+      "hsi": "3318",
+      "tr069": "3718"
+    },
+    {
+      "nama_olt": "OL01-NGN-SBY-RNKTDC",
+      "hsi": "3319",
+      "tr069": "3719"
+    },
+    {
+      "nama_olt": "OL02-NGN-SBY-SKDNOD",
+      "hsi": "3320",
+      "tr069": "3720"
+    },
+    {
+      "nama_olt": "OL02-NGN-SBY-BDRNOD",
+      "hsi": "3321",
+      "tr069": "3721"
+    },
+    {
+      "nama_olt": "OL01-NGN-MLG-BLBGOD",
+      "hsi": "3322",
+      "tr069": "3722"
+    },
+    {
+      "nama_olt": "OL02-NGN-MLG-LWWROD",
+      "hsi": "3323",
+      "tr069": "3723"
+    },
+    {
+      "nama_olt": "OL02-NGN-MLG-KLJNOD",
+      "hsi": "3324",
+      "tr069": "3724"
+    },
+    {
+      "nama_olt": "OL02-NGN-MLG-BLBGOD",
+      "hsi": "3325",
+      "tr069": "3725"
+    },
+    {
+      "nama_olt": "OL02-NGN-MLG-KDKGOD",
+      "hsi": "3326",
+      "tr069": "3726"
+    },
+    {
+      "nama_olt": "OL03-NGN-MLG-LWWROD",
+      "hsi": "3327",
+      "tr069": "3727"
+    },
+    {
+      "nama_olt": "OL01-NGN-MLG-KLJNOD",
+      "hsi": "3328",
+      "tr069": "3728"
+    },
+    {
+      "nama_olt": "OL01-NGN-MLG-LWWROD",
+      "hsi": "3329",
+      "tr069": "3729"
+    },
+    {
+      "nama_olt": "OL02-NGN-MLG-GDNGOD",
+      "hsi": "3330",
+      "tr069": "3730"
+    },
+    {
+      "nama_olt": "OL01-NGN-MLG-KDKGOD",
+      "hsi": "3331",
+      "tr069": "3731"
+    },
+    {
+      "nama_olt": "OL01-NGN-MLG-GDNGOD",
+      "hsi": "3332",
+      "tr069": "3732"
+    },
+    {
+      "nama_olt": "OL02-NGN-MDN-UNLDDC",
+      "hsi": "3481",
+      "tr069": "3881"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-MNTGOD",
+      "hsi": "3482",
+      "tr069": "3882"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-JHROD",
+      "hsi": "3483",
+      "tr069": "3883"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-SUGLOD",
+      "hsi": "3484",
+      "tr069": "3884"
+    },
+    {
+      "nama_olt": "OL02-NGN-MDN-MNTGOD",
+      "hsi": "3485",
+      "tr069": "3885"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-SLYGOD",
+      "hsi": "3486",
+      "tr069": "3886"
+    },
+    {
+      "nama_olt": "OL02-NGN-MDN-SLYGOD",
+      "hsi": "3487",
+      "tr069": "3887"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-BBRAOD",
+      "hsi": "3488",
+      "tr069": "3888"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-UNLDDC",
+      "hsi": "3489",
+      "tr069": "3889"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-PTBKOD",
+      "hsi": "3490",
+      "tr069": "3890"
+    },
+    {
+      "nama_olt": "OL01-NGN-MDN-YSDROD",
+      "hsi": "3491",
+      "tr069": "3891"
+    },
+    {
+      "nama_olt": "OL02-NGN-MDN-YSDROD",
+      "hsi": "3492",
+      "tr069": "3892"
+    }
+  ]
+  

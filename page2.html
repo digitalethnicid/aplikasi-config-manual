@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurasi Perangkat</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Generate Configuration</h1>
+
+            <label for="deviceSelect">Pilih perangkat</label>
+            <select id="deviceSelect">
+                <option value=""></option>
+                <option value="zte-c300">ZTE C300 HIFI</option>
+                <option value="zte-c600">ZTE C600</option>
+                <option value="huawei-hifi">HUAWEI HIFI</option>
+                <option value="nokia-hifi">NOKIA HIFI</option>
+                <option value="huawei-viberlink">HUAWEI VIBERLINK</option>
+                <option value="nokia-viberlink">NOKIA VIBERLINK</option>
+            </select>
+    
+            <label for="searchOlt">Search OLT</label>
+            <input type="text" id="searchOlt" placeholder="Search OLT" onchange="updateOltInfo()" autocomplete="off">
+    
+            <label for="oltSelect">Select OLT</label>
+            <select id="oltSelect" onchange="updateOltInfo()">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+    
+            <div id="oltInfo">
+                <div class="form-group hsi-info">
+                    <label for="hsiInfo">HSI</label>
+                    <p id="hsiInfo">Value for HSI</p>
+                </div>
+                <div class="form-group tr069-info">
+                    <label for="tr069Info">TR069</label>
+                    <p id="tr069Info">Value for TR-069</p>
+                </div>
+            </div>
+    
+            <label for="idPelanggan">ID Pelanggan</label>
+            <input type="text" id="idPelanggan" placeholder="Masukkan ID Pelanggan" autocomplete="off">
+    
+            <label for="sn">SN</label>
+            <input type="text" id="sn" placeholder="Masukkan SN" autocomplete="off">
+
+            <div class="paket-bandwith">
+
+            </div>
+    
+            
+            <div class="form-container">
+                <div class="form-group">
+                    <label for="slot">SLOT</label>
+                    <input type="number" min="0" max="20" id="slot" placeholder="Masukkan SLOT" autocomplete="off">
+                </div>
+            
+                <div class="form-group">
+                    <label for="port">PORT</label>
+                    <input type="number" min="0" max="20" id="port" placeholder="Masukkan PORT" autocomplete="off">
+                </div>
+            
+                <div class="form-group">
+                    <label for="onuId">ONU ID</label>
+                    <input type="number" min="0" max="20" id="onuId" placeholder="Masukkan ONU ID" autocomplete="off">
+                </div>
+            </div>
+    
+            <button class="generateConfig" onclick="generateConfig()">Tampilkan Konfigurasi</button>
+            <button onclick="clearForm()" class="clear">Clear</button>
+    
+            <div id="result-container" class="result-container">
+                
+            </div>
+        </div>
+       
+    <script src="generate.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel to JSON Converter</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Excel to JSON Converter</h1>
+        <div class="upload-section">
+            <input type="file" id="fileInput" accept=".xlsx, .xls">
+            <select id="sheetSelect">
+                <option value="">Select Sheet</option>
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+        <div class="options-section">
+            <label for="columnSelect">Select up to 5 columns:</label>
+            <select id="columnSelect" multiple>
+                <!-- Options will be populated dynamically -->
+            </select>
+        </div>
+        <div class="action-buttons">
+            <button id="convertButton">Convert to JSON</button>
+            <button id="downloadButton" style="display: none;">Download JSON</button>
+        </div>
+        <div class="result-section">
+            <div id="searchSection" style="display: none;">
+                <label for="searchInput">Search:</label>
+                <input type="text" id="searchInput" placeholder="Enter search term...">
+            </div>
+            <pre id="result"></pre>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="convert.js"></script>
+</body>
+</html>

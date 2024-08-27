@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Navigation with Iframes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>APLIKASI CONFIGURATION MANUAL</h1>
+        </header>
+        <div class="tabs">
+            <button class="tab-button" onclick="showPage('page1.html')">DATA WO TRACKER</button>
+            <button class="tab-button" onclick="showPage('page2.html')">GENERATE CONFIG</button>
+        </div>
+        <div class="content-container">
+            <iframe id="contentFrame" src="page1.html" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
