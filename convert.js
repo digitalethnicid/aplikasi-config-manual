@@ -113,18 +113,30 @@ function displayJson(data) {
 }
 
 function filterResults() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const result = document.getElementById('result');
-    const jsonData = JSON.parse(result.textContent || "[]");
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, ''); // Remove all whitespace
+    const storedData = localStorage.getItem('convertedData');
+    
+    if (!storedData) {
+        document.getElementById('result').textContent = 'No data available.';
+        return;
+    }
+
+    const jsonData = JSON.parse(storedData);
 
     const filteredData = jsonData.filter(item => 
-        Object.values(item).some(value => 
-            typeof value === 'string' && value.toLowerCase().includes(searchTerm)
-        )
+        Object.values(item).some(value => {
+            if (typeof value === 'string') {
+                // Remove whitespace and convert to lowercase for comparison
+                const cleanValue = value.toLowerCase().replace(/\s+/g, '');
+                return cleanValue.includes(searchTerm);
+            }
+            return false;
+        })
     );
 
-    result.textContent = JSON.stringify(filteredData, null, 2);
+    document.getElementById('result').textContent = JSON.stringify(filteredData, null, 2);
 }
+
 
 function downloadJson() {
     const convertedData = localStorage.getItem('convertedData');

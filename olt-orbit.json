@@ -6,8 +6,8 @@
     },
     {
       "nama_olt": "OL02-NGN-JKT-PSRMOD",
-      "hsi": "3401",
-      "tr069": "3801"
+      "hsi": "3406",
+      "tr069": "3806"
     },
     {
       "nama_olt": "OL01-NGN-JKT-CMGSOD",
@@ -116,8 +116,8 @@
     },
     {
       "nama_olt": "OL03-NGN-JKT-DRSWOD",
-      "hsi": "3423",
-      "tr069": "3823"
+      "hsi": "3424",
+      "tr069": "3824"
     },
     {
       "nama_olt": "OL01-NGN-JKT-DRSWOD",
@@ -496,8 +496,8 @@
     },
     {
       "nama_olt": "OL02-NGN-MDN-UNLDDC",
-      "hsi": "3481",
-      "tr069": "3881"
+      "hsi": "3489",
+      "tr069": "3889"
     },
     {
       "nama_olt": "OL01-NGN-MDN-MNTGOD",

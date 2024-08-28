@@ -195,7 +195,7 @@ function generateConfig() {
 configText = `
 configure t
 interface gpon-olt_1/${slot}/${port}
-onu ${onuId} type ZTEG-F670L sn ${sn}
+onu ${onuId} type ZTEG-F679L sn ${sn}
 !
 interface gpon-onu_1/${slot}/${port}:${onuId}
 description ${idPelanggan}
@@ -341,7 +341,7 @@ configONT = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/en
             <operationInitiator>1</operationInitiator>
         </ns:configure>
     </soapenv:Body>
-</soapenv:Envelope4> `;
+</soapenv:Envelope> `;
 
 configTR = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="uri://alcatel.com/apc/9.7">
 <soapenv:Header/>
@@ -426,7 +426,7 @@ configONT = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/en
             <operationInitiator>1</operationInitiator>
         </ns:configure>
     </soapenv:Body>
-</soapenv:Envelope4> `;
+</soapenv:Envelope> `;
 
 configTR = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="uri://alcatel.com/apc/9.7">
 <soapenv:Header/>
