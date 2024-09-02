@@ -1,12 +1,12 @@
 /* General body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  /* justify-content: center;
+  align-items: center;
+  height: 160vh; */
+  margin: 0;
   }
   
   /* Container styling */
@@ -18,50 +18,16 @@ body {
     width: 100%;
     max-width: 600px; /* Set a maximum width */
     box-sizing: border-box;
+    margin: 10px;
   }
 
   .container h1{
     text-align: center;
   }
   
-  /* Tabs container to hold the tab links */
-.tabs {
-  display: flex; /* Use Flexbox for layout */
-  overflow: hidden;
-  background-color: #f1f1f1;
-  margin-bottom: 20px;
-}
-
-/* Style each tab link */
-.tab-links {
-  flex: 1; /* Make each tab link take up equal space */
-  border: 1px solid #ccc;
-  border-bottom: none;
-  background-color: #ddd;
-  cursor: pointer;
-  padding: 14px 16px;
-  text-align: center;
-  transition: background-color 0.3s, border-top 0.3s;
-}
-
-/* Highlight the active tab link */
-.tab-links.active {
-  background-color: #fff;
-  border-top: 2px solid #007bff;
-}
-
-/* Style the tab content area */
-.tab-content {
-  display: none;
-  padding: 25px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-/* Show the active tab content */
-.tab-content.active {
-  display: block;
-}
+  .result-section h3{
+    text-align: center;
+  }
   
   /* Label styling */
   label {
@@ -169,10 +135,10 @@ body {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 12px 20px; /* Increased padding for a more comfortable click area */
+  padding: 10px 20px; /* Increased padding for a more comfortable click area */
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
+  margin: 10px;
   transition: background-color 0.3s; /* Smooth color transition */
 }
 
@@ -233,3 +199,90 @@ body {
   .result-container.active button::before{
     display: block;
   }
+  .result-section {
+    margin-top: 10px;
+  }
+
+  .result-section pre {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    overflow: auto;
+    max-height: 300px;
+}
+
+#searchSection {
+    margin-bottom: 10px;
+}
+
+#searchInput {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+.search {
+  background-color: #a3a6a8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 17%;
+  padding: 10px; /* Increased padding for a more comfortable click area */
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for buttons */
+.search:hover {
+  background-color: #5a5b5c;
+}
+
+.search:active {
+  background-color: #218838;
+}
+
+#clearData {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px; /* Increased padding for a more comfortable click area */
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+#clearData:hover {
+  background-color: #c82333;
+}
+
+#clearData:active {
+  background-color: #218838;
+}
+
+#downloadButton {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px; /* Increased padding for a more comfortable click area */
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: background-color 0.3s; /* Smooth color transition */
+}
+
+#downloadButton:hover {
+  background-color: #218838;
+}
+
+#downloadButton:active {
+  background-color: #0a2d12;
+}

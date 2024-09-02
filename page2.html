@@ -8,17 +8,38 @@
 </head>
 <body>
     <div class="container">
+        <div class="result-section">
+            <h3>Data Hasil Convert WO Tracker</h3>
+            <pre id="result"></pre>
+            <button onclick="clearLocalStorage()" id="clearData"  style="display: none;">Clear Data</button>
+            <button onclick="downloadJson()" id="downloadButton" style="display: none;">Download JSON</button>
+        </div>
+        <div class="result-section">
+            <h3>Search Data Customer</h3>
+            <div id="searchSection">
+                <input type="text" id="searchInput" placeholder="Enter search term..." autocomplete="off">
+                <button onclick="filterResults()" class="search">Search</button>
+            </div>
+        </div>
+        <div class="result-section">
+            <pre id="customer-detail">
+
+            </pre>
+        </div>
+    </div>
+    <div class="container">
         <h1>Form Generate Configuration</h1>
 
             <label for="deviceSelect">Pilih perangkat</label>
             <select id="deviceSelect">
                 <option value=""></option>
                 <option value="zte-c300">ZTE C300 HIFI</option>
-                <option value="zte-c600">ZTE C600</option>
+                <option value="zte-c600">ZTE C600 HIFI</option>
                 <option value="huawei-hifi">HUAWEI HIFI</option>
                 <option value="nokia-hifi">NOKIA HIFI</option>
                 <option value="huawei-viberlink">HUAWEI VIBERLINK</option>
                 <option value="nokia-viberlink">NOKIA VIBERLINK</option>
+                <option value="zte-c300-dankom">ZTE C300 DANKOM</option>
             </select>
     
             <label for="searchOlt">Search OLT</label>
@@ -71,8 +92,7 @@
             <button class="generateConfig" onclick="generateConfig()">Tampilkan Konfigurasi</button>
             <button onclick="clearForm()" class="clear">Clear</button>
     
-            <div id="result-container" class="result-container">
-                
+            <div id="result-container" class="result-container">   
             </div>
         </div>
        

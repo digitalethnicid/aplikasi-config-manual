@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
     margin: 0;
 }
 
@@ -17,11 +17,15 @@ body {
     max-width: 600px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
 
 h1 {
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .upload-section,
@@ -32,11 +36,18 @@ h1 {
     margin-bottom: 20px;
 }
 
+.upload-section,
+.options-section {
+    display: flex;
+    flex-direction: column;
+}
+
 .upload-section input[type="file"] {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: calc(100% - 22px); /* Full width minus padding and border */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .upload-section select,
@@ -45,7 +56,6 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
-    max-width: 100%;
     box-sizing: border-box;
 }
 
@@ -53,6 +63,11 @@ h1 {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
 }
 
 .action-buttons button {
@@ -105,12 +120,4 @@ h1 {
     box-sizing: border-box;
 }
 
-#countdownSection {
-    text-align: center;
-}
 
-#countdownTimer {
-    font-size: 18px;
-    color: #d9534f;
-    font-weight: bold;
-}

@@ -1,85 +1,84 @@
 
-    // define variable global
-    const deviceSelect = document.getElementById('deviceSelect');
-    const resultContainer = document.querySelector('.result-container');
-    const paketBW = document.querySelector('.paket-bandwith');
-    let oltData = [];
+// define variable global
+const deviceSelect = document.getElementById('deviceSelect');
+const resultContainer = document.querySelector('.result-container');
+const paketBW = document.querySelector('.paket-bandwith');
+let oltData = [];
     
 
-    // fungsi menentukan device
-    deviceSelect.addEventListener('change', () => {
-        const deviceType = deviceSelect.value;
-        resultContainer.innerHTML = ''; // Clear previous inputs
-
-        if (deviceType == 'zte-c300' | deviceType == 'zte-c600' | deviceType == 'huawei-hifi') {
-            paketBW.innerHTML ='';
-            resultContainer.innerHTML = `
+// fungsi menentukan device
+deviceSelect.addEventListener('change', () => {
+    const deviceType = deviceSelect.value;
+    resultContainer.innerHTML = ''; // Clear previous inputs
+    if (deviceType == 'zte-c300' | deviceType == 'zte-c600' | deviceType == 'huawei-hifi') {
+        paketBW.innerHTML ='';
+        resultContainer.innerHTML = `
+        <div class="form-result">
+            <textarea id="configOutput" readonly></textarea>
+            <button onclick="copy()">
+                <span id="copy-btn">copy</span>
+            </button>
+        </div>
+        `;
+    }else if (deviceType == 'huawei-viberlink') {
+        paketBW.innerHTML = `
+        <div class="form-group">
+        <label for="username-ppoe">USERNAME PPOE</label>
+        <input type="text" id="username-ppoe" placeholder="Masukkan USERNAME PPOE" autocomplete="off">
+        </div>
+        <div class="form-group">
+        <label for="password-ppoe">PASSWORD PPOE</label>
+        <input type="text" id="password-ppoe" placeholder="Masukkan PASSWORD PPOE" autocomplete="off">
+        </div>
+        `;
+        resultContainer.innerHTML = `
+        <div class="form-result">
+            <textarea id="configOutput" readonly></textarea>
+            <button onclick="copy()">
+                <span id="copy-btn">copy</span>
+            </button>
+        </div>
+        `;
+    } 
+    else if (deviceType === 'nokia-hifi' | deviceType === 'nokia-viberlink') {
+        paketBW.innerHTML = `
+        <div class="form-group">
+        <label for="paket-pelanggan">Pilih Paket Bandwith</label>
+        <select id="paket-pelanggan">
+            <option value=""></option>
+            <option value="15">15 M</option>
+            <option value="30">30 M</option>
+            <option value="50">50 M</option>
+            <option value="100">100 M</option>
+            <option value="500">500 M</option>
+        </select>
+        </div>
+        `;
+        resultContainer.innerHTML = `
+            <label>Konfigurasi ONT</label>
             <div class="form-result">
-                <textarea id="configOutput" readonly></textarea>
-                <button onclick="copy()">
-                    <span id="copy-btn">copy</span>
-                </button>
+            <textarea id="configONT" readonly></textarea>
+            <button onclick="copy()">
+                <span id="copy-btn">copy</span>
+            </button>
             </div>
-            `;
-        }else if (deviceType == 'huawei-viberlink') {
-            paketBW.innerHTML = `
-            <div class="form-group">
-            <label for="username-ppoe">USERNAME PPOE</label>
-            <input type="text" id="username-ppoe" placeholder="Masukkan USERNAME PPOE" autocomplete="off">
-            </div>
-            <div class="form-group">
-            <label for="password-ppoe">PASSWORD PPOE</label>
-            <input type="text" id="password-ppoe" placeholder="Masukkan PASSWORD PPOE" autocomplete="off">
-            </div>
-            `;
-            resultContainer.innerHTML = `
+            <label>Konfigurasi TR</label>
             <div class="form-result">
-                <textarea id="configOutput" readonly></textarea>
-                <button onclick="copy()">
-                    <span id="copy-btn">copy</span>
-                </button>
+            <textarea id="configTR" readonly></textarea>
+            <button onclick="copyTR()">
+                <span id="copy-btn">copy</span>
+            </button>
             </div>
-            `;
-        } 
-        else if (deviceType === 'nokia-hifi' | deviceType === 'nokia-viberlink') {
-            paketBW.innerHTML = `
-            <div class="form-group">
-            <label for="paket-pelanggan">Pilih Paket Bandwith</label>
-            <select id="paket-pelanggan">
-                <option value=""></option>
-                <option value="15">15 M</option>
-                <option value="30">30 M</option>
-                <option value="50">50 M</option>
-                <option value="100">100 M</option>
-                <option value="500">500 M</option>
-            </select>
+            <label>Konfigurasi HSI</label>
+            <div class="form-result">
+            <textarea id="configHSI" readonly></textarea>
+            <button onclick="copyHSI()">
+                <span id="copy-btn">copy</span>
+            </button>
             </div>
-            `;
-            resultContainer.innerHTML = `
-                <label>Konfigurasi ONT</label>
-                <div class="form-result">
-                <textarea id="configONT" readonly></textarea>
-                <button onclick="copy()">
-                    <span id="copy-btn">copy</span>
-                </button>
-                </div>
-                <label>Konfigurasi TR</label>
-                <div class="form-result">
-                <textarea id="configTR" readonly></textarea>
-                <button onclick="copyTR()">
-                    <span id="copy-btn">copy</span>
-                </button>
-                </div>
-                <label>Konfigurasi HSI</label>
-                <div class="form-result">
-                <textarea id="configHSI" readonly></textarea>
-                <button onclick="copyHSI()">
-                    <span id="copy-btn">copy</span>
-                </button>
-                </div>
-            `;
-        }
-    });
+        `;
+    }
+});
 
 
 
@@ -141,18 +140,18 @@ function setupSearchFunctionality(data) {
   }
   
   // Function to set up search functionality for OLT dropdown
-  function setupSearchFunctionality(data) {
-    const searchInput = document.getElementById("searchOlt");
-    const oltSelect = document.getElementById("oltSelect");
-  
-    searchInput.addEventListener("input", () => {
-      const query = searchInput.value.toLowerCase();
-      const filteredData = data.filter((item) =>
-        item.nama_olt.toLowerCase().includes(query)
-      );
-      populateOltSelect(filteredData);
-    });
-  }
+function setupSearchFunctionality(data) {
+  const searchInput = document.getElementById("searchOlt");
+  const oltSelect = document.getElementById("oltSelect");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    const filteredData = data.filter((item) =>
+      item.nama_olt.toLowerCase().includes(query)
+    );
+    populateOltSelect(filteredData);
+  });
+}
 
   // Function to update OLT info based on the selected OLT
 function updateOltInfo() {
@@ -169,6 +168,7 @@ function updateOltInfo() {
 window.onload = fetchOltData;
 
 
+
 function generateConfig() {
     const deviceSelected = document.getElementById("deviceSelect").value;
     const idPelanggan = document.getElementById("idPelanggan").value;
@@ -177,6 +177,7 @@ function generateConfig() {
     const slot = document.getElementById("slot").value;
     const port = document.getElementById("port").value;
     const onuId = document.getElementById("onuId").value;
+    
 
   
     // Find the selected OLT data
@@ -200,10 +201,9 @@ onu ${onuId} type ZTEG-F679L sn ${sn}
 interface gpon-onu_1/${slot}/${port}:${onuId}
 description ${idPelanggan}
 tcont 1 profile best-1G
-tcont 2 profile share-300m-b
 gemport 1 name inet tcont 1
-gemport 1 traffic-limit downstream 1g
-gemport 2 name TR-069 tcont 2
+gemport 1 traffic-limit downstream 1g 
+gemport 2 name TR-069 tcont 1
 gemport 2 traffic-limit downstream 300m
 service-port 1 vport 1 user-vlan 30 vlan ${hsi}
 service-port 2 vport 2 user-vlan 20 vlan ${tr069}
@@ -228,9 +228,8 @@ onu ${onuId} type ZTEG-F679L SN ${sn}
 interface gpon_onu-1/${slot}/${port}:${onuId}
 description ${idPelanggan}
 tcont 1 profile best-1G
-tcont 2 profile share-300m-b
-gemport 1 name inet tcont 1
-gemport 2 name tr069 tcont 2
+  gemport 1 name inet tcont 1
+  gemport 2 name tr069 tcont 1
 !
   
 pon-onu-mng gpon_onu-1/${slot}/${port}:${onuId}
@@ -274,7 +273,7 @@ ont port route ${port} ${onuId} eth 4 enable
 q
   
 service-port vlan ${hsi} gpon 0/${slot}/${port} ont ${onuId} gemport 1 multi-service user-vlan 30 tag-transform translate inbound traffic-table index 500 outbound 
-traffic-table index 500
+traffic-table index 0
 service-port vlan ${tr069} gpon 0/${slot}/${port} ont ${onuId} gemport 2 multi-service user-vlan 20 tag-transform translate inbound traffic-table index 0 outbound 
 traffic-table index  0
   
@@ -485,75 +484,152 @@ document.getElementById("configHSI").value = configHSI;
     
 }
 
-    // fungsi untuk copy config ont
-    function copy(){
-        if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
-        const textConfig = document.getElementById('configOutput');
-        textConfig.select();
-        document.execCommand('copy');
-        document.getElementById('copy-btn').style.display = 'none';
-        resultContainer.classList.add('active');
-        window.getSelection().removeAllRanges();
-        setTimeout(()=>{
-            document.getElementById('copy-btn').style.display = 'block';
-        resultContainer.classList.remove('active');
-        },2500);
-        }else if(deviceSelect.value === 'nokia-hifi' | deviceSelect.value === 'nokia-viberlink' ){
-        const textConfig = document.getElementById('configONT');
-        textConfig.select();
-        document.execCommand('copy');
-        document.getElementById('copy-btn').style.display = 'none';
-        resultContainer.classList.add('active');
-        window.getSelection().removeAllRanges();
-        setTimeout(()=>{
-            document.getElementById('copy-btn').style.display = 'block';
-        resultContainer.classList.remove('active');
-        },2500);
-        }
-        
+// fungsi untuk copy config ont
+function copy(){
+    if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
+    const textConfig = document.getElementById('configOutput');
+    textConfig.select();
+    document.execCommand('copy');
+    document.getElementById('copy-btn').style.display = 'none';
+    resultContainer.classList.add('active');
+    window.getSelection().removeAllRanges();
+    setTimeout(()=>{
+        document.getElementById('copy-btn').style.display = 'block';
+    resultContainer.classList.remove('active');
+    },2500);
+    }else if(deviceSelect.value === 'nokia-hifi' | deviceSelect.value === 'nokia-viberlink' ){
+    const textConfig = document.getElementById('configONT');
+    textConfig.select();
+    document.execCommand('copy');
+    document.getElementById('copy-btn').style.display = 'none';
+    resultContainer.classList.add('active');
+    window.getSelection().removeAllRanges();
+    setTimeout(()=>{
+        document.getElementById('copy-btn').style.display = 'block';
+    resultContainer.classList.remove('active');
+    },2500);
+    } 
+}
+
+// fungsi untuk copy config TR
+function copyTR(){
+    const textConfig = document.getElementById('configTR');
+    textConfig.select();
+    document.execCommand('copy');
+    document.getElementById('copy-btn').style.display = 'none';
+    resultContainer.classList.add('active');
+    window.getSelection().removeAllRanges();
+    setTimeout(()=>{
+        document.getElementById('copy-btn').style.display = 'block';
+    resultContainer.classList.remove('active');
+    },2500);
+}
+
+// fungsi untuk copy config HSI
+function copyHSI(){
+    const textConfig = document.getElementById('configHSI');
+    textConfig.select();
+    document.execCommand('copy');
+    document.getElementById('copy-btn').style.display = 'none';
+    resultContainer.classList.add('active');
+    window.getSelection().removeAllRanges();
+    setTimeout(()=>{
+        document.getElementById('copy-btn').style.display = 'block';
+    resultContainer.classList.remove('active');
+    },2500);
+}
+
+function clearForm() {
+    document.getElementById("deviceSelect").value = "";
+    document.getElementById("oltSelect").innerHTML = ""; // Clear OLT options
+    document.getElementById("searchOlt").value = "";
+    document.getElementById("idPelanggan").value = "";
+    document.getElementById("sn").value = "";
+    document.getElementById("slot").value = "";
+    document.getElementById("port").value = "";
+    document.getElementById("onuId").value = "";
+    document.getElementById("configOutput").value = "";
+    document.getElementById("configONT").value = "";
+    document.getElementById("configTR").value = "";
+    document.getElementById("configHSI").value = "";
+    document.getElementById("hsiInfo").textContent = "HSI: ";
+    document.getElementById("tr069Info").textContent = "TR-069: ";
+}
+
+
+let jsonData = [];
+let selectedColumns = [];
+
+// Load data from localStorage when the page loads
+window.addEventListener('load', () => {
+    const storedData = localStorage.getItem('convertedData');
+    if (storedData) {
+        const parsedData = JSON.parse(storedData);
+        displayJson(parsedData);
+        document.getElementById('searchSection').style.display = 'block';
+        document.getElementById('clearData').style.display = 'inline-block';
+        document.getElementById('downloadButton').style.display = 'inline-block';
+    }
+});
+
+function displayJson(data) {
+    const result = document.getElementById('result');
+    result.textContent = JSON.stringify(data, null, 2);
+    // filterResults(); // Apply search filter to the newly displayed results
+}
+
+function downloadJson() {
+    const convertedData = localStorage.getItem('convertedData');
+    if (!convertedData) {
+        alert('No data available to download.');
+        return;
     }
 
-    // fungsi untuk copy config TR
-    function copyTR(){
-        const textConfig = document.getElementById('configTR');
-        textConfig.select();
-        document.execCommand('copy');
-        document.getElementById('copy-btn').style.display = 'none';
-        resultContainer.classList.add('active');
-        window.getSelection().removeAllRanges();
-        setTimeout(()=>{
-            document.getElementById('copy-btn').style.display = 'block';
-        resultContainer.classList.remove('active');
-        },2500);
+    const blob = new Blob([convertedData], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'hasil.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function filterResults() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, ''); // Remove all whitespace
+    const storedData = localStorage.getItem('convertedData');
+    
+    if (!storedData) {
+        document.getElementById('result').textContent = 'No data available.';
+        return;
     }
 
-    // fungsi untuk copy config HSI
-    function copyHSI(){
-        const textConfig = document.getElementById('configHSI');
-        textConfig.select();
-        document.execCommand('copy');
-        document.getElementById('copy-btn').style.display = 'none';
-        resultContainer.classList.add('active');
-        window.getSelection().removeAllRanges();
-        setTimeout(()=>{
-            document.getElementById('copy-btn').style.display = 'block';
-        resultContainer.classList.remove('active');
-        },2500);
-    }
+    const jsonData = JSON.parse(storedData);
 
-    function clearForm() {
-        document.getElementById("deviceSelect").value = "";
-        document.getElementById("oltSelect").innerHTML = ""; // Clear OLT options
-        document.getElementById("searchOlt").value = "";
-        document.getElementById("idPelanggan").value = "";
-        document.getElementById("sn").value = "";
-        document.getElementById("slot").value = "";
-        document.getElementById("port").value = "";
-        document.getElementById("onuId").value = "";
-        document.getElementById("configOutput").value = "";
-        document.getElementById("configONT").value = "";
-        document.getElementById("configTR").value = "";
-        document.getElementById("configHSI").value = "";
-        document.getElementById("hsiInfo").textContent = "HSI: ";
-        document.getElementById("tr069Info").textContent = "TR-069: ";
-      }
+    const filteredData = jsonData.filter(item => 
+        Object.values(item).some(value => {
+            if (typeof value === 'string') {
+                // Remove whitespace and convert to lowercase for comparison
+                const cleanValue = value.toLowerCase().replace(/\s+/g, '');
+                return cleanValue.includes(searchTerm);
+            }
+            return false;
+        })
+    );
+
+// Limit the number of items to display to 2
+const limitedData = filteredData.slice(0, 2);
+
+document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
+}
+
+function clearLocalStorage() {
+    localStorage.removeItem('convertedData');
+    document.getElementById('result').textContent = '';
+    document.getElementById('searchInput').value = '';
+    document.getElementById('searchSection').style.display = 'none';
+    document.getElementById('downloadButton').style.display = 'none';
+    document.getElementById('clearData').style.display = 'none';
+    document.getElementById('clearStorageButton').style.display = 'none';
+    alert('Local storage cleared.');
+}
