@@ -103,13 +103,44 @@ function convertToJson() {
 
     displayJson(filteredData);
     document.getElementById('searchSection').style.display = 'block'; // Show search section
+    document.getElementById('clearData').style.display = 'inline-block';
     document.getElementById('downloadButton').style.display = 'inline-block';
 }
+
+
+// Load data from localStorage when the page loads
+window.addEventListener('load', () => {
+    const storedData = localStorage.getItem('convertedData');
+    if (storedData) {
+        const parsedData = JSON.parse(storedData);
+        displayJson(parsedData);
+        document.getElementById('searchSection').style.display = 'block';
+        document.getElementById('clearData').style.display = 'inline-block';
+        document.getElementById('downloadButton').style.display = 'inline-block';
+    }
+});
 
 function displayJson(data) {
     const result = document.getElementById('result');
     result.textContent = JSON.stringify(data, null, 2);
-    filterResults(); // Apply search filter to the newly displayed results
+    // filterResults(); // Apply search filter to the newly displayed results
+}
+
+function downloadJson() {
+    const convertedData = localStorage.getItem('convertedData');
+    if (!convertedData) {
+        alert('No data available to download.');
+        return;
+    }
+
+    const blob = new Blob([convertedData], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'hasil.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 }
 
 function filterResults() {
@@ -134,23 +165,17 @@ function filterResults() {
         })
     );
 
-    document.getElementById('result').textContent = JSON.stringify(filteredData, null, 2);
+// Limit the number of items to display to 2
+const limitedData = filteredData.slice(0, 2);
+
+document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
 }
 
-
-function downloadJson() {
-    const convertedData = localStorage.getItem('convertedData');
-    if (!convertedData) {
-        alert('No data available to download.');
-        return;
-    }
-
-    const blob = new Blob([convertedData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'hasil.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+function clearLocalStorage() {
+    localStorage.removeItem('convertedData');
+    document.getElementById('result').textContent = '';
+    document.getElementById('searchInput').value = '';
+    document.getElementById('searchSection').style.display = 'none';
+    document.getElementById('downloadButton').style.display = 'none';
+    document.getElementById('clearData').style.display = 'none';
 }

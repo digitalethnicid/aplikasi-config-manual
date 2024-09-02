@@ -3,9 +3,8 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
   display: flex;
-  /* justify-content: center;
+  justify-content: center;
   align-items: center;
-  height: 160vh; */
   margin: 0;
   }
   
@@ -16,7 +15,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly increased shadow */
     padding: 20px;
     width: 100%;
-    max-width: 500px; /* Set a maximum width */
+    max-width: 600px; /* Set a maximum width */
     box-sizing: border-box;
     margin: 10px;
   }
@@ -116,7 +115,7 @@ body {
   padding: 12px 20px; /* Increased padding for a more comfortable click area */
   cursor: pointer;
   font-size: 16px;
-  margin-right: 10px;
+  margin: 10px;
   transition: background-color 0.3s; /* Smooth color transition */
 }
 
@@ -135,7 +134,7 @@ body {
   color: #fff;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px; /* Increased padding for a more comfortable click area */
+  padding: 12px 20px; /* Increased padding for a more comfortable click area */
   cursor: pointer;
   font-size: 16px;
   margin: 10px;

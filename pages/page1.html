@@ -24,14 +24,24 @@
         </div>
         <div class="action-buttons">
             <button id="convertButton">Convert to JSON</button>
-            <button id="downloadButton" style="display: none;">Download JSON</button>
         </div>
         <div class="result-section">
-            <div id="searchSection" style="display: none;">
-                <label for="searchInput">Search:</label>
-                <input type="text" id="searchInput" placeholder="Enter search term...">
-            </div>
+            <h3>Data Hasil Convert WO Tracker</h3>
             <pre id="result"></pre>
+            <button onclick="clearLocalStorage()" id="clearData"  style="display: none;">Clear Data</button>
+            <button onclick="downloadJson()" id="downloadButton" style="display: none;">Download JSON</button>
+        </div>
+        <div class="result-section">
+            <h3>Search Data Customer</h3>
+            <div id="searchSection">
+                <input type="text" id="searchInput" placeholder="Enter search term..." autocomplete="off">
+                <button onclick="filterResults()" class="search">Search</button>
+            </div>
+        </div>
+        <div class="result-section">
+            <pre id="customer-detail">
+
+            </pre>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>

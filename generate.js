@@ -557,79 +557,79 @@ function clearForm() {
 }
 
 
-let jsonData = [];
-let selectedColumns = [];
+// let jsonData = [];
+// let selectedColumns = [];
 
-// Load data from localStorage when the page loads
-window.addEventListener('load', () => {
-    const storedData = localStorage.getItem('convertedData');
-    if (storedData) {
-        const parsedData = JSON.parse(storedData);
-        displayJson(parsedData);
-        document.getElementById('searchSection').style.display = 'block';
-        document.getElementById('clearData').style.display = 'inline-block';
-        document.getElementById('downloadButton').style.display = 'inline-block';
-    }
-});
+// // Load data from localStorage when the page loads
+// window.addEventListener('load', () => {
+//     const storedData = localStorage.getItem('convertedData');
+//     if (storedData) {
+//         const parsedData = JSON.parse(storedData);
+//         displayJson(parsedData);
+//         document.getElementById('searchSection').style.display = 'block';
+//         document.getElementById('clearData').style.display = 'inline-block';
+//         document.getElementById('downloadButton').style.display = 'inline-block';
+//     }
+// });
 
-function displayJson(data) {
-    const result = document.getElementById('result');
-    result.textContent = JSON.stringify(data, null, 2);
-    // filterResults(); // Apply search filter to the newly displayed results
-}
+// function displayJson(data) {
+//     const result = document.getElementById('result');
+//     result.textContent = JSON.stringify(data, null, 2);
+//     // filterResults(); // Apply search filter to the newly displayed results
+// }
 
-function downloadJson() {
-    const convertedData = localStorage.getItem('convertedData');
-    if (!convertedData) {
-        alert('No data available to download.');
-        return;
-    }
+// function downloadJson() {
+//     const convertedData = localStorage.getItem('convertedData');
+//     if (!convertedData) {
+//         alert('No data available to download.');
+//         return;
+//     }
 
-    const blob = new Blob([convertedData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'hasil.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-}
+//     const blob = new Blob([convertedData], { type: 'application/json' });
+//     const url = URL.createObjectURL(blob);
+//     const a = document.createElement('a');
+//     a.href = url;
+//     a.download = 'hasil.json';
+//     document.body.appendChild(a);
+//     a.click();
+//     document.body.removeChild(a);
+// }
 
-function filterResults() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, ''); // Remove all whitespace
-    const storedData = localStorage.getItem('convertedData');
+// function filterResults() {
+//     const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, ''); // Remove all whitespace
+//     const storedData = localStorage.getItem('convertedData');
     
-    if (!storedData) {
-        document.getElementById('result').textContent = 'No data available.';
-        return;
-    }
+//     if (!storedData) {
+//         document.getElementById('result').textContent = 'No data available.';
+//         return;
+//     }
 
-    const jsonData = JSON.parse(storedData);
+//     const jsonData = JSON.parse(storedData);
 
-    const filteredData = jsonData.filter(item => 
-        Object.values(item).some(value => {
-            if (typeof value === 'string') {
-                // Remove whitespace and convert to lowercase for comparison
-                const cleanValue = value.toLowerCase().replace(/\s+/g, '');
-                return cleanValue.includes(searchTerm);
-            }
-            return false;
-        })
-    );
+//     const filteredData = jsonData.filter(item => 
+//         Object.values(item).some(value => {
+//             if (typeof value === 'string') {
+//                 // Remove whitespace and convert to lowercase for comparison
+//                 const cleanValue = value.toLowerCase().replace(/\s+/g, '');
+//                 return cleanValue.includes(searchTerm);
+//             }
+//             return false;
+//         })
+//     );
 
-// Limit the number of items to display to 2
-const limitedData = filteredData.slice(0, 2);
+// // Limit the number of items to display to 2
+// const limitedData = filteredData.slice(0, 2);
 
-document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
-}
+// document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
+// }
 
-function clearLocalStorage() {
-    localStorage.removeItem('convertedData');
-    document.getElementById('result').textContent = '';
-    document.getElementById('searchInput').value = '';
-    document.getElementById('searchSection').style.display = 'none';
-    document.getElementById('downloadButton').style.display = 'none';
-    document.getElementById('clearData').style.display = 'none';
-    document.getElementById('clearStorageButton').style.display = 'none';
-    alert('Local storage cleared.');
-}
+// function clearLocalStorage() {
+//     localStorage.removeItem('convertedData');
+//     document.getElementById('result').textContent = '';
+//     document.getElementById('searchInput').value = '';
+//     document.getElementById('searchSection').style.display = 'none';
+//     document.getElementById('downloadButton').style.display = 'none';
+//     document.getElementById('clearData').style.display = 'none';
+//     document.getElementById('clearStorageButton').style.display = 'none';
+//     alert('Local storage cleared.');
+// }
