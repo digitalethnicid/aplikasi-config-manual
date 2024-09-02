@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Slightly increased shadow */
     padding: 20px;
     width: 100%;
-    max-width: 600px; /* Set a maximum width */
+    max-width: 500px; /* Set a maximum width */
     box-sizing: border-box;
     margin: 10px;
   }

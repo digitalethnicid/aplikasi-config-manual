@@ -86,7 +86,7 @@ deviceSelect.addEventListener('change', () => {
 function fetchOltData() {
     deviceSelect.addEventListener('change', () => {
         if(deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
-            fetch("./data/olt-orbit.json")
+            fetch("../data/olt-orbit.json")
             .then((response) => response.json())
             .then((data) => {
               oltData = data; // Store the data in a global variable
@@ -96,7 +96,7 @@ function fetchOltData() {
             .catch((error) => console.error("Error fetching OLT data:", error));
         }
         else if(deviceSelect.value === 'nokia-hifi' | deviceSelect.value === 'nokia-viberlink'){
-            fetch("./data/olt-hifi.json")
+            fetch("../data/olt-hifi.json")
             .then((response) => response.json())
             .then((data) => {
               oltData = data; // Store the data in a global variable
