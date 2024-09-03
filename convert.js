@@ -72,7 +72,10 @@ function handleSheetChange() {
         let obj = {};
         row.forEach((cell, i) => obj[headers[i]] = cell);
         return obj;
-    }).filter(row => Object.values(row).some(value => value !== null && value !== undefined && value !== ''));
+    }).filter(row => {
+        // Filter out rows that are completely empty or only have empty values
+        return Object.values(row).some(value => value !== null && value !== undefined && value !== '');
+    });
 
     populateColumnSelect(headers);
 }
@@ -141,6 +144,9 @@ function convertToJson() {
             obj[col] = row[col];
         });
         return obj;
+    }).filter(row => {
+        // Filter out rows that are completely empty or only have empty values
+        return Object.values(row).some(value => value !== null && value !== undefined && value !== '');
     });
 
     // Save result to IndexedDB
