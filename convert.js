@@ -4,22 +4,32 @@ document.getElementById('sheetSelect').addEventListener('change', handleSheetCha
 document.getElementById('convertButton').addEventListener('click', convertToJson, false);
 document.getElementById('downloadButton').addEventListener('click', downloadJson, false);
 document.getElementById('searchInput').addEventListener('input', filterResults, false);
+document.getElementById('clearData').addEventListener('click', clearIndexedDB, false);
 
 let workbook;
 let jsonData = [];
 let selectedColumns = [];
+let db;
 
-// Load data from localStorage when the page loads
-window.addEventListener('load', () => {
-    const storedData = localStorage.getItem('convertedData');
-    if (storedData) {
-        const parsedData = JSON.parse(storedData);
-        displayJson(parsedData);
-        document.getElementById('searchSection').style.display = 'block';
-        document.getElementById('downloadButton').style.display = 'inline-block';
+// Initialize IndexedDB
+const request = indexedDB.open('myDatabase', 1);
+
+request.onupgradeneeded = function(event) {
+    db = event.target.result;
+    if (!db.objectStoreNames.contains('convertedDataStore')) {
+        db.createObjectStore('convertedDataStore', { keyPath: 'id' });
     }
-});
+};
 
+request.onsuccess = function(event) {
+    db = event.target.result;
+};
+
+request.onerror = function(event) {
+    console.error('Database error:', event.target.errorCode);
+};
+
+// Handle file upload
 function handleFile(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -31,15 +41,15 @@ function handleFile(event) {
 
         populateSheetSelect();
 
-        // Notify user that file has been uploaded successfully
         alert('File uploaded successfully! Please select a sheet and columns.');
     };
     reader.readAsArrayBuffer(file);
 }
 
+// Populate sheet select options
 function populateSheetSelect() {
     const sheetSelect = document.getElementById('sheetSelect');
-    sheetSelect.innerHTML = '<option value="">Select Sheet</option>'; // Clear previous options
+    sheetSelect.innerHTML = '<option value="">Select Sheet</option>';
 
     workbook.SheetNames.forEach(sheetName => {
         const option = document.createElement('option');
@@ -49,6 +59,7 @@ function populateSheetSelect() {
     });
 }
 
+// Handle sheet selection
 function handleSheetChange() {
     const sheetName = document.getElementById('sheetSelect').value;
     if (!sheetName) return;
@@ -56,22 +67,20 @@ function handleSheetChange() {
     const sheet = workbook.Sheets[sheetName];
     const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-    // Remove headers and use the first row as headers
     const headers = json.shift();
-    jsonData = json
-        .map(row => {
-            let obj = {};
-            row.forEach((cell, i) => obj[headers[i]] = cell);
-            return obj;
-        })
-        .filter(row => Object.values(row).some(value => value !== null && value !== undefined && value !== ''));
+    jsonData = json.map(row => {
+        let obj = {};
+        row.forEach((cell, i) => obj[headers[i]] = cell);
+        return obj;
+    }).filter(row => Object.values(row).some(value => value !== null && value !== undefined && value !== ''));
 
     populateColumnSelect(headers);
 }
 
+// Populate column select options
 function populateColumnSelect(headers) {
     const columnSelect = document.getElementById('columnSelect');
-    columnSelect.innerHTML = ''; // Clear previous options
+    columnSelect.innerHTML = '';
 
     headers.forEach(header => {
         const option = document.createElement('option');
@@ -81,6 +90,42 @@ function populateColumnSelect(headers) {
     });
 }
 
+// Save data to IndexedDB
+function saveToIndexedDB(data) {
+    const transaction = db.transaction(['convertedDataStore'], 'readwrite');
+    const store = transaction.objectStore('convertedDataStore');
+    const request = store.put({ id: 'convertedData', data: data });
+
+    request.onsuccess = function() {
+        console.log('Data saved to IndexedDB.');
+    };
+
+    request.onerror = function(event) {
+        console.error('Error saving data to IndexedDB:', event.target.errorCode);
+    };
+}
+
+// Get data from IndexedDB
+function getFromIndexedDB(callback) {
+    const transaction = db.transaction(['convertedDataStore'], 'readonly');
+    const store = transaction.objectStore('convertedDataStore');
+    const request = store.get('convertedData');
+
+    request.onsuccess = function(event) {
+        const result = event.target.result;
+        if (result) {
+            callback(result.data);
+        } else {
+            console.error('No data found in IndexedDB.');
+        }
+    };
+
+    request.onerror = function(event) {
+        console.error('Error retrieving data from IndexedDB:', event.target.errorCode);
+    };
+}
+
+// Convert data to JSON and save to IndexedDB
 function convertToJson() {
     const columnSelect = document.getElementById('columnSelect');
     selectedColumns = Array.from(columnSelect.selectedOptions).map(option => option.value);
@@ -98,84 +143,93 @@ function convertToJson() {
         return obj;
     });
 
-    // Save result to localStorage
-    localStorage.setItem('convertedData', JSON.stringify(filteredData));
+    // Save result to IndexedDB
+    saveToIndexedDB(filteredData);
 
     displayJson(filteredData);
-    document.getElementById('searchSection').style.display = 'block'; // Show search section
+    document.getElementById('searchSection').style.display = 'block';
     document.getElementById('clearData').style.display = 'inline-block';
     document.getElementById('downloadButton').style.display = 'inline-block';
 }
 
-
-// Load data from localStorage when the page loads
-window.addEventListener('load', () => {
-    const storedData = localStorage.getItem('convertedData');
-    if (storedData) {
-        const parsedData = JSON.parse(storedData);
-        displayJson(parsedData);
-        document.getElementById('searchSection').style.display = 'block';
-        document.getElementById('clearData').style.display = 'inline-block';
-        document.getElementById('downloadButton').style.display = 'inline-block';
-    }
-});
-
+// Display JSON data
 function displayJson(data) {
     const result = document.getElementById('result');
     result.textContent = JSON.stringify(data, null, 2);
-    // filterResults(); // Apply search filter to the newly displayed results
 }
 
+// Download JSON data
 function downloadJson() {
-    const convertedData = localStorage.getItem('convertedData');
-    if (!convertedData) {
-        alert('No data available to download.');
-        return;
-    }
+    getFromIndexedDB(data => {
+        if (!data) {
+            alert('No data available to download.');
+            return;
+        }
 
-    const blob = new Blob([convertedData], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'hasil.json';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+        const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'hasil.json';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    });
 }
 
+// Filter results
 function filterResults() {
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, ''); // Remove all whitespace
-    const storedData = localStorage.getItem('convertedData');
-    
-    if (!storedData) {
-        document.getElementById('result').textContent = 'No data available.';
-        return;
-    }
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, '');
+    getFromIndexedDB(data => {
+        if (!data) {
+            document.getElementById('result').textContent = 'No data available.';
+            return;
+        }
 
-    const jsonData = JSON.parse(storedData);
+        const filteredData = data.filter(item =>
+            Object.values(item).some(value => {
+                if (typeof value === 'string') {
+                    const cleanValue = value.toLowerCase().replace(/\s+/g, '');
+                    return cleanValue.includes(searchTerm);
+                }
+                return false;
+            })
+        );
 
-    const filteredData = jsonData.filter(item => 
-        Object.values(item).some(value => {
-            if (typeof value === 'string') {
-                // Remove whitespace and convert to lowercase for comparison
-                const cleanValue = value.toLowerCase().replace(/\s+/g, '');
-                return cleanValue.includes(searchTerm);
-            }
-            return false;
-        })
-    );
+        // Limit the number of items to display to 2
+        const limitedData = filteredData.slice(0, 2);
 
-// Limit the number of items to display to 2
-const limitedData = filteredData.slice(0, 2);
-
-document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
+        document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
+    });
 }
 
-function clearLocalStorage() {
-    localStorage.removeItem('convertedData');
-    document.getElementById('result').textContent = '';
-    document.getElementById('searchInput').value = '';
-    document.getElementById('searchSection').style.display = 'none';
-    document.getElementById('downloadButton').style.display = 'none';
-    document.getElementById('clearData').style.display = 'none';
+// Clear data from IndexedDB
+function clearIndexedDB() {
+    const transaction = db.transaction(['convertedDataStore'], 'readwrite');
+    const store = transaction.objectStore('convertedDataStore');
+    const request = store.delete('convertedData');
+
+    request.onsuccess = function() {
+        console.log('Data cleared from IndexedDB.');
+        document.getElementById('result').textContent = '';
+        document.getElementById('searchInput').value = '';
+        document.getElementById('searchSection').style.display = 'none';
+        document.getElementById('downloadButton').style.display = 'none';
+        document.getElementById('clearData').style.display = 'none';
+    };
+
+    request.onerror = function(event) {
+        console.error('Error clearing data from IndexedDB:', event.target.errorCode);
+    };
 }
+
+// Load data from IndexedDB on page load
+window.addEventListener('load', () => {
+    getFromIndexedDB(data => {
+        if (data) {
+            displayJson(data);
+            document.getElementById('searchSection').style.display = 'block';
+            document.getElementById('downloadButton').style.display = 'inline-block';
+        }
+    });
+});
