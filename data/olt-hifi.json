@@ -1268,5 +1268,10 @@
         "nama_olt": "BTL-SDDOD-OLT1-FX16",
         "tr069": "1607",
         "hsi": "1999"
+    },
+    {
+        "nama_olt": "BTL-BTROD-OLT1-FX16",
+        "tr069": "1607",
+        "hsi": "1999"
     }
 ]
