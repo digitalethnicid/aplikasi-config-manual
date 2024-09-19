@@ -330,7 +330,7 @@ configONT = `<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/en
              </argument>
              <argument>
                 <name>configFiles_Config1_Planned</name>
-                <value>CFGASIA004</value>
+                <value>CFGASIA005</value>
              </argument>
              <argument>
                 <name>ontSubscriberId1</name>
