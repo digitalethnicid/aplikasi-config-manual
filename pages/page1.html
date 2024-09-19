@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Excel to JSON Converter</title>
+    <title>WO TRACKER READER</title>
     <link rel="stylesheet" href="../styles/style1.css">
 </head>
 <body>
     <div class="container">
-        <h1>Excel to JSON Converter</h1>
+        <h1>WO TRACKER READER</h1>
         <div class="upload-section">
             <input type="file" id="fileInput" accept=".xlsx, .xls">
             <select id="sheetSelect">
@@ -28,15 +28,15 @@
         <div class="result-section">
             <h3>Search Data Customer</h3>
             <div id="searchSection">
-                <input type="text" id="searchInput" placeholder="Enter search term..." autocomplete="off">
-                <button onclick="filterResults()" class="search">Search</button>
+                <input type="text" id="searchInput" placeholder="Cari data pelanggan..." autocomplete="off">
+                <!-- <button onclick="filterResults()" class="search">Search</button> -->
             </div>
         </div>
         <div class="result-section">
-            <pre id="customer-detail"></pre>
+            <div id="customer-detail"></div>
         </div>
         <div class="result-section">
-            <h3>Data Hasil Convert WO Tracker</h3>
+            <h3>Data WO Tracker</h3>
             <pre id="result"></pre>
             <button onclick="clearLocalStorage()" id="clearData"  style="display: none;">Clear Data</button>
             <button onclick="downloadJson()" id="downloadButton" style="display: none;">Download JSON</button>

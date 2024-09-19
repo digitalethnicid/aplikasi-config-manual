@@ -67,8 +67,9 @@ function handleSheetChange() {
     const sheet = workbook.Sheets[sheetName];
     const json = XLSX.utils.sheet_to_json(sheet, { header: 1 });
 
-    const headers = json.shift();
-    jsonData = json.map(row => {
+    // Adjust to read headers from the 3rd row (index 2)
+    const headers = json[2]; // Assuming 0-based index, this gets the 3rd row
+    jsonData = json.slice(3).map(row => { // Start from the 4th row (index 3)
         let obj = {};
         row.forEach((cell, i) => obj[headers[i]] = cell);
         return obj;
@@ -79,6 +80,7 @@ function handleSheetChange() {
 
     populateColumnSelect(headers);
 }
+
 
 // Populate column select options
 function populateColumnSelect(headers) {
@@ -91,22 +93,57 @@ function populateColumnSelect(headers) {
         option.textContent = header;
         columnSelect.appendChild(option);
     });
+
+    document.getElementById('convertButton').style.display = 'block';
 }
 
 // Save data to IndexedDB
-function saveToIndexedDB(data) {
+// function saveToIndexedDB(data) {
+//     const transaction = db.transaction(['convertedDataStore'], 'readwrite');
+//     const store = transaction.objectStore('convertedDataStore');
+//     const request = store.put({ id: 'convertedData', data: data });
+
+//     request.onsuccess = function() {
+//         console.log('Data saved to IndexedDB.');
+//     };
+
+//     request.onerror = function(event) {
+//         console.error('Error saving data to IndexedDB:', event.target.errorCode);
+//     };
+// }
+
+// Save data to IndexedDB with combine
+function saveToIndexedDB(newData) {
     const transaction = db.transaction(['convertedDataStore'], 'readwrite');
     const store = transaction.objectStore('convertedDataStore');
-    const request = store.put({ id: 'convertedData', data: data });
 
-    request.onsuccess = function() {
-        console.log('Data saved to IndexedDB.');
-    };
+    const request = store.get('convertedData');
 
-    request.onerror = function(event) {
-        console.error('Error saving data to IndexedDB:', event.target.errorCode);
+    request.onsuccess = function(event) {
+        const result = event.target.result;
+        let existingData = [];
+
+        if (result) {
+            existingData = result.data;
+        } else {
+            console.log('No existing data found. Creating new entry.');
+        }
+
+        const data = existingData.concat(newData);
+        const saveRequest = store.put({ id: 'convertedData', data: data });
+
+        saveRequest.onsuccess = function() {
+            console.log('Combined data saved to IndexedDB.');
+        };
+
+        saveRequest.onerror = function(event) {
+            console.error('Error saving combined data to IndexedDB:', event.target.errorCode);
+        };
     };
-}
+};
+
+
+
 
 // Get data from IndexedDB
 function getFromIndexedDB(callback) {
@@ -152,10 +189,15 @@ function convertToJson() {
     // Save result to IndexedDB
     saveToIndexedDB(filteredData);
 
-    displayJson(filteredData);
     document.getElementById('searchSection').style.display = 'block';
     document.getElementById('clearData').style.display = 'inline-block';
     document.getElementById('downloadButton').style.display = 'inline-block';
+
+    setTimeout(() => {
+        getFromIndexedDB(data => {
+        displayJson(data);
+    });
+    }, 3000); // Delay dalam milidetik (3000ms = 3 detik)
 }
 
 // Display JSON data
@@ -185,12 +227,19 @@ function downloadJson() {
 
 // Filter results
 function filterResults() {
+
+    
     const searchTerm = document.getElementById('searchInput').value.toLowerCase().replace(/\s+/g, '');
     getFromIndexedDB(data => {
         if (!data) {
             document.getElementById('result').textContent = 'No data available.';
             return;
         }
+    const customerDetail = document.getElementById('customer-detail');
+    customerDetail.innerHTML = ''; // Clear previous data
+    if (data.length === 0) {
+        return; // Do not display anything if no data
+    }
 
         const filteredData = data.filter(item =>
             Object.values(item).some(value => {
@@ -203,9 +252,57 @@ function filterResults() {
         );
 
         // Limit the number of items to display to 2
-        const limitedData = filteredData.slice(0, 2);
+        const limitedData = filteredData.slice(0, 1);
 
-        document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
+        // document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
+        
+
+        limitedData.forEach(item => {
+            const dataItem = document.createElement('div');
+            dataItem.classList.add('data-item');
+    
+            const fieldsToShow = [
+                "Customer ID",
+                "Username",
+                "BillingID",
+                "Device ID",
+                "PartnerWorkID (OHxx)"
+            ];
+    
+            fieldsToShow.forEach(field => {
+                const input = document.createElement('input');
+                input.type = 'text';
+                if (field === "BillingID") {
+                    input.value = `FH_${item[field]}`;
+                } else {
+                    input.value = item[field];
+                }
+                input.readOnly = true;
+                dataItem.appendChild(input);
+    
+                // Create the copy button
+                const copyButton = document.createElement('button');
+                copyButton.classList.add('copy-button');
+                copyButton.textContent = 'Salin';
+                copyButton.onclick = () => {
+                    navigator.clipboard.writeText(input.value)
+                        .then(() => {
+                            copyButton.textContent = 'Disalin';
+                            copyButton.classList.add('disalin');
+                            setTimeout(() => {
+                                copyButton.textContent = 'Salin';
+                                copyButton.classList.remove('disalin');
+                            }, 2000);
+                        })
+                        .catch(err => console.error('Gagal menyalin: ', err));
+                };
+                dataItem.appendChild(copyButton);
+            });
+    
+            customerDetail.appendChild(dataItem);
+        });
+    
+    
     });
 }
 
@@ -234,7 +331,9 @@ window.addEventListener('load', () => {
     getFromIndexedDB(data => {
         if (data) {
             displayJson(data);
+            document.getElementById('convertButton').style.display = 'none';
             document.getElementById('searchSection').style.display = 'block';
+            document.getElementById('clearData').style.display = 'inline-block';
             document.getElementById('downloadButton').style.display = 'inline-block';
         }
     });
