@@ -106,9 +106,7 @@ function fetchOltData() {
             .catch((error) => console.error("Error fetching OLT data:", error));
         }
     });
-    
-    
-  }
+}
   
   // Function to populate the OLT dropdown with data from JSON
   function populateOltSelect(data) {
@@ -140,18 +138,18 @@ function setupSearchFunctionality(data) {
   }
   
   // Function to set up search functionality for OLT dropdown
-function setupSearchFunctionality(data) {
-  const searchInput = document.getElementById("searchOlt");
-  const oltSelect = document.getElementById("oltSelect");
+// function setupSearchFunctionality(data) {
+//   const searchInput = document.getElementById("searchOlt");
+//   const oltSelect = document.getElementById("oltSelect");
 
-  searchInput.addEventListener("input", () => {
-    const query = searchInput.value.toLowerCase();
-    const filteredData = data.filter((item) =>
-      item.nama_olt.toLowerCase().includes(query)
-    );
-    populateOltSelect(filteredData);
-  });
-}
+//   searchInput.addEventListener("input", () => {
+//     const query = searchInput.value.toLowerCase();
+//     const filteredData = data.filter((item) =>
+//       item.nama_olt.toLowerCase().includes(query)
+//     );
+//     populateOltSelect(filteredData);
+//   });
+// }
 
   // Function to update OLT info based on the selected OLT
 function updateOltInfo() {

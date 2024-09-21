@@ -126,14 +126,16 @@ function saveToIndexedDB(newData) {
         if (result) {
             existingData = result.data;
         } else {
-            console.log('No existing data found. Creating new entry.');
+            // console.log('No existing data found. Creating new entry.');
+            alert('Berhasil simpan data customer');
         }
 
         const data = existingData.concat(newData);
         const saveRequest = store.put({ id: 'convertedData', data: data });
 
         saveRequest.onsuccess = function() {
-            console.log('Combined data saved to IndexedDB.');
+            // console.log('Combined data saved to IndexedDB.');
+            alert('Data customer ditambahkan');
         };
 
         saveRequest.onerror = function(event) {
@@ -198,11 +200,14 @@ function convertToJson() {
         displayJson(data);
     });
     }, 3000); // Delay dalam milidetik (3000ms = 3 detik)
+    document.getElementById('convertButton').style.display = 'none';
 }
 
 // Display JSON data
 function displayJson(data) {
     const result = document.getElementById('result');
+    const totalCustomer = document.getElementById('total-customer');
+    totalCustomer.textContent = `Total Customer : ${data.length}`;
     result.textContent = JSON.stringify(data, null, 2);
 }
 
@@ -252,7 +257,7 @@ function filterResults() {
         );
 
         // Limit the number of items to display to 2
-        const limitedData = filteredData.slice(0, 1);
+        const limitedData = filteredData.slice(0, 2);
 
         // document.getElementById('customer-detail').textContent = JSON.stringify(limitedData, null, 2);
         
@@ -260,6 +265,7 @@ function filterResults() {
         limitedData.forEach(item => {
             const dataItem = document.createElement('div');
             dataItem.classList.add('data-item');
+
     
             const fieldsToShow = [
                 "Customer ID",
@@ -313,7 +319,8 @@ function clearIndexedDB() {
     const request = store.delete('convertedData');
 
     request.onsuccess = function() {
-        console.log('Data cleared from IndexedDB.');
+        // console.log('Data cleared from IndexedDB.');
+        alert('Hapus data customer');
         document.getElementById('result').textContent = '';
         document.getElementById('searchInput').value = '';
         document.getElementById('searchSection').style.display = 'none';
