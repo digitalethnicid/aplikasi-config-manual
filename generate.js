@@ -20,7 +20,7 @@ deviceSelect.addEventListener('change', () => {
             </button>
         </div>
         `;
-    }else if (deviceType == 'huawei-viberlink') {
+    }else if (deviceType == 'huawei-viberlink' | deviceType == 'zte-c300-relabs') {
         paketBW.innerHTML = `
         <div class="form-group">
         <label for="username-ppoe">USERNAME PPOE</label>
@@ -85,7 +85,7 @@ deviceSelect.addEventListener('change', () => {
 // Function to fetch the OLT data from the JSON file and populate the dropdown
 function fetchOltData() {
     deviceSelect.addEventListener('change', () => {
-        if(deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
+        if(deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
             fetch("../data/olt-orbit.json")
             .then((response) => response.json())
             .then((data) => {
@@ -248,6 +248,33 @@ service-port 2 description TR069
 qos traffic-policy 300M direction egress
 !
 end
+`;
+document.getElementById("configOutput").value = configText;
+}
+else if (deviceSelected === "zte-c300-relabs") 
+{
+const usernamePPOE = document.getElementById("username-ppoe").value;
+const passwordPPOE = document.getElementById("password-ppoe").value;
+configText = `
+configure t
+interface gpon-olt_1/${slot}/${port}
+onu ${onuId} type ZTEG-F679L sn ${sn}
+!
+interface gpon-onu_1/${slot}/${port}:${onuId}
+description ${idPelanggan}
+tcont 1 profile best-1G
+gemport 1 name inet tcont 1
+gemport 1 traffic-limit downstream 1g 
+gemport 2 name TR-069 tcont 1
+gemport 2 traffic-limit downstream 300m
+service-port 1 vport 1 user-vlan 30 vlan 2503 
+service-port 2 vport 2 user-vlan 20 vlan 2000 
+!
+pon-onu-mng gpon-onu_1/${slot}/${port}:${onuId}
+service inet gemport 1 vlan 30
+service TR-069 gemport 2 vlan 20
+wan-ip 1 mode pppoe username ${usernamePPOE} password ${passwordPPOE} vlan-profile vlan30 host 1
+!
 `;
 document.getElementById("configOutput").value = configText;
 }
@@ -484,7 +511,7 @@ document.getElementById("configHSI").value = configHSI;
 
 // fungsi untuk copy config ont
 function copy(){
-    if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
+    if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceType == 'zte-c300-relabs'){
     const textConfig = document.getElementById('configOutput');
     textConfig.select();
     document.execCommand('copy');
