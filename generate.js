@@ -20,7 +20,7 @@ deviceSelect.addEventListener('change', () => {
             </button>
         </div>
         `;
-    }else if (deviceType == 'huawei-viberlink' | deviceType == 'zte-c300-relabs') {
+    }else if (deviceType == 'huawei-viberlink' | deviceType == 'zte-c300-relabs' | deviceType == 'huawei-relabs') {
         paketBW.innerHTML = `
         <div class="form-group">
         <label for="username-ppoe">USERNAME PPOE</label>
@@ -85,7 +85,7 @@ deviceSelect.addEventListener('change', () => {
 // Function to fetch the OLT data from the JSON file and populate the dropdown
 function fetchOltData() {
     deviceSelect.addEventListener('change', () => {
-        if(deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink'){
+        if(deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-relabs' | deviceSelect.value == 'huawei-viberlink'){
             fetch("../data/olt-orbit.json")
             .then((response) => response.json())
             .then((data) => {
@@ -335,6 +335,36 @@ traffic-table index  0
 `;
 document.getElementById("configOutput").value = configText;
 }
+else if (deviceSelected === "huawei-relabs") 
+{
+const usernamePPOE = document.getElementById("username-ppoe").value;
+const passwordPPOE = document.getElementById("password-ppoe").value;
+configText = `
+config
+interface gpon 0/${slot}
+ont add ${port} ${onuId} sn-auth "${sn}" omci ont-lineprofile-id 88
+ont-srvprofile-id 1 desc "${idPelanggan}"
+
+ont ipconfig ${port} ${onuId} pppoe vlan 30 priority 0 user-account username "${usernamePPOE}"
+password "${passwordPPOE}"
+ont ipconfig ${port} ${onuId} ip-index 1 dhcp vlan 20 priority 5
+ont internet-config ${port} ${onuId} ip-index 0
+ont wan-config ${port} ${onuId} ip-index 0 profile-id 1
+ont port route ${port} ${onuId} eth 1 enable
+ont port route ${port} ${onuId} eth 2 enable
+ont port route ${port} ${onuId} eth 3 enable
+ont port route ${port} ${onuId} eth 4 enable
+  
+q
+  
+service-port vlan 2503 gpon 0/${slot}/${port} ont ${onuId} gemport 1 multi-service user-vlan 30 tag-transform translate inbound traffic-table index 500 outbound 
+traffic-table index 500
+service-port vlan 2000 gpon 0/${slot}/${port} ont ${onuId} gemport 2 multi-service user-vlan 20 tag-transform translate inbound traffic-table index 0 outbound 
+traffic-table index  0
+  
+`;
+document.getElementById("configOutput").value = configText;
+}
 else if (deviceSelected === "nokia-hifi") 
 {
 const paketPelanggan = document.getElementById("paket-pelanggan").value;
@@ -511,7 +541,7 @@ document.getElementById("configHSI").value = configHSI;
 
 // fungsi untuk copy config ont
 function copy(){
-    if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceType == 'zte-c300-relabs'){
+    if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-relabs'){
     const textConfig = document.getElementById('configOutput');
     textConfig.select();
     document.execCommand('copy');
