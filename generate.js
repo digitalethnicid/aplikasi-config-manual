@@ -78,6 +78,27 @@ deviceSelect.addEventListener('change', () => {
             </div>
         `;
     }
+    else if (deviceType === 'zte-c300-orbit') {
+        paketBW.innerHTML = `
+        <div class="form-group">
+        <label for="paket-pelanggan">Pilih Paket Bandwith</label>
+        <select id="paket-pelanggan">
+            <option value=""></option>
+            <option value="407">100 M</option>
+            <option value="423">300 M</option>
+            <option value="409">500 M</option>
+        </select>
+        </div>
+        `;
+        resultContainer.innerHTML = `
+            <div class="form-result">
+            <textarea id="configOutput" readonly></textarea>
+            <button onclick="copy()">
+                <span id="copy-btn">copy</span>
+            </button>
+        </div>
+        `;
+    }
 });
 
 
@@ -189,7 +210,47 @@ function generateConfig() {
     let configTR = "";
     let configHSI = "";
   
-    if (deviceSelected === "zte-c300") 
+    if (deviceSelected === "zte-c300-orbit") 
+{
+const paketPelanggan = document.getElementById("paket-pelanggan").value;
+configText = `
+configure t
+interface gpon-olt_1/${slot}/${port}
+onu ${onuId} type ZTEG-F679L sn ${sn}
+!
+interface gpon-onu_1/${slot}/${port}:${onuId}
+  description ${idPelanggan}
+  tcont 1 profile share-300m-b
+  gemport 1 name inet tcont 1
+  gemport 1 traffic-limit downstream 300m 
+  gemport 2 name iptv tcont 1
+  gemport 2 traffic-limit downstream 300m 
+  gemport 3 name voip tcont 1
+  gemport 3 traffic-limit downstream 300m 
+  service-port 1 vport 1 user-vlan ${paketPelanggan} vlan ${paketPelanggan}
+  service-port 2 vport 2 user-vlan 200 vlan 200 
+  service-port 3 vport 3 user-vlan 300 vlan 300
+  !   
+    
+pon-onu-mng gpon-onu_1/${slot}/${port}:${onuId}
+  service inet gemport 1 vlan ${paketPelanggan}
+  service iptv gemport 2 vlan 200
+  wan-ip 1 mode dhcp vlan-profile vlan${paketPelanggan} host 1
+  vlan port eth_0/2 mode tag vlan 200
+  vlan port eth_0/3 mode tag vlan 200
+  vlan port eth_0/4 mode tag vlan 200                                                   
+  dhcp-ip ethuni eth_0/2 from-internet
+  dhcp-ip ethuni eth_0/3 from-internet
+  dhcp-ip ethuni eth_0/4 from-internet
+  mvlan 200
+  !
+  
+igmp mvlan 200 receive-port gpon-onu_1/${slot}/${port}:${onuId} vport 2
+!
+`;
+document.getElementById("configOutput").value = configText;
+}
+    else if (deviceSelected === "zte-c300") 
 {
 configText = `
 configure t
@@ -541,7 +602,7 @@ document.getElementById("configHSI").value = configHSI;
 
 // fungsi untuk copy config ont
 function copy(){
-    if (deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-relabs'){
+    if (deviceSelect.value == 'zte-c300-orbit' | deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-relabs'){
     const textConfig = document.getElementById('configOutput');
     textConfig.select();
     document.execCommand('copy');
