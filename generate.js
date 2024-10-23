@@ -3,6 +3,7 @@
 const deviceSelect = document.getElementById('deviceSelect');
 const resultContainer = document.querySelector('.result-container');
 const paketBW = document.querySelector('.paket-bandwith');
+const oltGroup = document.querySelector('.olt-group');
 let oltData = [];
     
 
@@ -11,6 +12,7 @@ deviceSelect.addEventListener('change', () => {
     const deviceType = deviceSelect.value;
     resultContainer.innerHTML = ''; // Clear previous inputs
     if (deviceType == 'zte-c300' | deviceType == 'zte-c600' | deviceType == 'huawei-hifi') {
+        oltGroup.style.display = "block";
         paketBW.innerHTML ='';
         resultContainer.innerHTML = `
         <div class="form-result">
@@ -21,6 +23,7 @@ deviceSelect.addEventListener('change', () => {
         </div>
         `;
     }else if (deviceType == 'huawei-viberlink' | deviceType == 'zte-c300-relabs' | deviceType == 'huawei-relabs') {
+        oltGroup.style.display = "none";
         paketBW.innerHTML = `
         <div class="form-group">
         <label for="username-ppoe">USERNAME PPOE</label>
@@ -41,6 +44,7 @@ deviceSelect.addEventListener('change', () => {
         `;
     } 
     else if (deviceType === 'nokia-hifi' | deviceType === 'nokia-viberlink') {
+        oltGroup.style.display = "block";
         paketBW.innerHTML = `
         <div class="form-group">
         <label for="paket-pelanggan">Pilih Paket Bandwith</label>
@@ -78,7 +82,8 @@ deviceSelect.addEventListener('change', () => {
             </div>
         `;
     }
-    else if (deviceType === 'zte-c300-orbit') {
+    else if (deviceType === 'zte-c300-orbit' | deviceType === 'huawei-orbit') {
+        oltGroup.style.display = "none";
         paketBW.innerHTML = `
         <div class="form-group">
         <label for="paket-pelanggan">Pilih Paket Bandwith</label>
@@ -98,7 +103,7 @@ deviceSelect.addEventListener('change', () => {
             </button>
         </div>
         `;
-    }
+    } 
 });
 
 
@@ -247,6 +252,43 @@ pon-onu-mng gpon-onu_1/${slot}/${port}:${onuId}
   
 igmp mvlan 200 receive-port gpon-onu_1/${slot}/${port}:${onuId} vport 2
 !
+`;
+document.getElementById("configOutput").value = configText;
+}
+    else if (deviceSelected === "huawei-orbit") 
+{
+const paketPelanggan = document.getElementById("paket-pelanggan").value;
+let prof_id = '';
+if(paketPelanggan == '407'){
+    prof_id = '8';
+} else if (paketPelanggan == '423'){
+    prof_id = '84';
+} else if (paketPelanggan == '409'){
+    prof_id = '20';
+}
+configText = `
+config
+interface gpon 0/${slot}
+ont add ${port} ${onuId} sn-auth "${sn}" omci ont-lineprofile-id ${prof_id}
+ont-srvprofile-id 1 desc "${idPelanggan}"
+
+ont ipconfig ${port} ${onuId} dhcp vlan ${paketPelanggan} priority 0
+ont internet-config ${port} ${onuId} ip-index 0
+ont wan-config ${port} ${onuId} ip-index 0 profile-id 1
+ont port route ${port} ${onuId} eth 1 enable
+ont port native-vlan ${port} ${onuId} eth 2 vlan 200 priority 0 
+ont port native-vlan ${port} ${onuId} eth 3 vlan 200 priority 0 
+ont port route ${port} ${onuId} eth 4 enable
+
+quit
+
+service-port vlan ${paketPelanggan} gpon 0/${slot}/${port} ont ${onuId} gemport 1 multi-service user-vlan ${paketPelanggan} tag-transform translate inbound traffic-table index 0 outbound 
+traffic-table index 0
+service-port vlan 200 gpon 0/${slot}/${port} ont ${onuId} gemport 2 multi-service user-vlan 200 tag-transform translate inbound traffic-table index 0 outbound 
+traffic-table index 0
+service-port vlan 300 gpon 0/${slot}/${port} ont ${onuId} gemport 3 multi-service user-vlan 300 tag-transform translate inbound traffic-table index 0 outbound 
+traffic-table index 0 
+
 `;
 document.getElementById("configOutput").value = configText;
 }
@@ -602,7 +644,7 @@ document.getElementById("configHSI").value = configHSI;
 
 // fungsi untuk copy config ont
 function copy(){
-    if (deviceSelect.value == 'zte-c300-orbit' | deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-relabs'){
+    if (deviceSelect.value == 'huawei-orbit' | deviceSelect.value == 'zte-c300-orbit' | deviceSelect.value == 'zte-c300' | deviceSelect.value == 'zte-c600' | deviceSelect.value == 'huawei-hifi' | deviceSelect.value == 'huawei-viberlink' | deviceSelect.value == 'zte-c300-relabs' | deviceSelect.value == 'huawei-relabs'){
     const textConfig = document.getElementById('configOutput');
     textConfig.select();
     document.execCommand('copy');

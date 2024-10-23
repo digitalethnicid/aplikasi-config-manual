@@ -34,6 +34,7 @@
             <select id="deviceSelect">
                 <option value=""></option>
                 <option value="zte-c300-orbit">ZTE C300 ORBIT</option>
+                <option value="huawei-orbit">HUAWEI ORBIT</option>
                 <option value="zte-c300">ZTE C300 HIFI</option>
                 <option value="zte-c600">ZTE C600 HIFI</option>
                 <option value="huawei-hifi">HUAWEI HIFI</option>
@@ -43,8 +44,9 @@
                 <option value="zte-c300-relabs">ZTE C300 RELABS</option>
                 <option value="huawei-relabs">HUAWEI RELABS</option>
             </select>
-    
-            <label for="searchOlt">Search OLT</label>
+
+            <div class="olt-group">
+<label for="searchOlt">Search OLT</label>
             <input type="text" id="searchOlt" placeholder="Search OLT" onchange="updateOltInfo()" autocomplete="off">
     
             <label for="oltSelect">Select OLT</label>
@@ -62,6 +64,9 @@
                     <p id="tr069Info">Value for TR-069</p>
                 </div>
             </div>
+            </div>
+    
+            
     
             <label for="idPelanggan">ID Pelanggan</label>
             <input type="text" id="idPelanggan" placeholder="Masukkan ID Pelanggan" autocomplete="off">
