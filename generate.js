@@ -186,7 +186,7 @@ function updateOltInfo() {
       document.getElementById("hsiInfo").textContent = `${oltInfo.hsi}`;
       document.getElementById("tr069Info").textContent = `${oltInfo.tr069}`;
     }
-  }
+}
 
 
 window.onload = fetchOltData;

@@ -6,6 +6,12 @@
         "hsi": ""
     },
     {
+        "nama_olt": "JKT-DRSOD-OLT4-FX4",
+        "oam": "1111",
+        "tr069": "3827",
+        "hsi": "3427"
+    },
+    {
         "nama_olt": "TNG-ARUT4-OLT1-FX16",
         "oam": "1441",
         "tr069": "1336",
@@ -446,8 +452,8 @@
     {
         "nama_olt": "BTL-SDDOD-OLT1-FX16",
         "oam": "1446",
-        "tr069": "1607",
-        "hsi": "1999"
+        "tr069": "903",
+        "hsi": "803"
     },
     {
         "nama_olt": "SMN-AMT01-OLT1-FX16",
@@ -458,20 +464,20 @@
     {
         "nama_olt": "SMN-CCROD-OLT1-FX8",
         "oam": "1446",
-        "tr069": "1607",
-        "hsi": "1999"
+        "tr069": "902",
+        "hsi": "844"
     },
     {
         "nama_olt": "SMN-GGIOD-OLT1-FX8",
         "oam": "1446",
-        "tr069": "1607",
+        "tr069": "902",
         "hsi": "1999"
     },
     {
         "nama_olt": "SMN-MMIOD-OLT1-FX8",
         "oam": "1446",
-        "tr069": "1607",
-        "hsi": "1999"
+        "tr069": "902",
+        "hsi": "846"
     },
     {
         "nama_olt": "BDG-DMKOD-OLT1-FX16",
