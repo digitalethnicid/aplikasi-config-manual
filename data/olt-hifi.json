@@ -1,1196 +1,1226 @@
 [
-    {
-        "nama_olt": "Pilih OLT",
-        "oam": "",
-        "tr069": "",
-        "hsi": ""
-    },
-    {
-        "nama_olt": "JKT-DRSOD-OLT4-FX4",
-        "oam": "1111",
-        "tr069": "3827",
-        "hsi": "3427"
-    },
-    {
-        "nama_olt": "TNG-ARUT4-OLT1-FX16",
-        "oam": "1441",
-        "tr069": "1336",
-        "hsi": "1936"
-    },
-    {
-        "nama_olt": "TNG-BJ4OD-OLT1-FX16",
-        "oam": "1580",
-        "tr069": "1616",
-        "hsi": "1920"
-    },
-    {
-        "nama_olt": "TNG-BSDOD-OLT1-FX16",
-        "oam": "1494",
-        "tr069": "1393",
-        "hsi": "1987"
-    },
-    {
-        "nama_olt": "TNG-CLGB1-OLT1-FX16",
-        "oam": "1596",
-        "tr069": "1647",
-        "hsi": "1215"
-    },
-    {
-        "nama_olt": "TNG-EPSGF-OLT1-FX16",
-        "oam": "1438",
-        "tr069": "1333",
-        "hsi": "1933"
-    },
-    {
-        "nama_olt": "TNG-GACB1-OLT1-FX16",
-        "oam": "1418",
-        "tr069": "1313",
-        "hsi": "1913"
-    },
-    {
-        "nama_olt": "TNG-GDTOD-OLT1-FX16",
-        "oam": "1593",
-        "tr069": "1638",
-        "hsi": "1212"
-    },
-    {
-        "nama_olt": "TNG-GWSOD-OLT1-FX16",
-        "oam": "1487",
-        "tr069": "1386",
-        "hsi": "1980"
-    },
-    {
-        "nama_olt": "TNG-MDNB1-OLT1-FX16",
-        "oam": "1562",
-        "tr069": "1561",
-        "hsi": "1563"
-    },
-    {
-        "nama_olt": "TNG-PIDOD-OLT1-FX16",
-        "oam": "1587",
-        "tr069": "1627",
-        "hsi": "1206"
-    },
-    {
-        "nama_olt": "TNG-PMPOD-OLT1-FX16",
-        "oam": "1403",
-        "tr069": "1303",
-        "hsi": "1903"
-    },
-    {
-        "nama_olt": "TNG-PVLGF-OLT1-FX16",
-        "oam": "1440",
-        "tr069": "1335",
-        "hsi": "1935"
-    },
-    {
-        "nama_olt": "TNG-SRHOD-OLT1-FX16",
-        "oam": "1581",
-        "tr069": "1617",
-        "hsi": "1921"
-    },
-    {
-        "nama_olt": "TNG-TLBOD-OLT1-FX16",
-        "oam": "1598",
-        "tr069": "1649",
-        "hsi": "1217"
-    },
-    {
-        "nama_olt": "TNG-TMGOD-OLT1-FX16",
-        "oam": "1497",
-        "tr069": "1396",
-        "hsi": "1990"
-    },
-    {
-        "nama_olt": "TNG-TPGOD-OLT1-FX16",
-        "oam": "1597",
-        "tr069": "1648",
-        "hsi": "1216"
-    },
-    {
-        "nama_olt": "TNG-TRIOD-OLT1-FX16",
-        "oam": "1481",
-        "tr069": "1380",
-        "hsi": "1973"
-    },
-    {
-        "nama_olt": "BKS-RWAOD-OLT1-FX16",
-        "oam": "531",
-        "tr069": "410",
-        "hsi": "310"
-    },
-    {
-        "nama_olt": "JKB-CPKSD-OLT1-FX16",
-        "oam": "1512",
-        "tr069": "1300",
-        "hsi": "1513"
-    },
-    {
-        "nama_olt": "JKB-CRAO1-OLT1-FX16",
-        "oam": "1486",
-        "tr069": "1385",
-        "hsi": "1979"
-    },
-    {
-        "nama_olt": "JKB-GCCB2-OLT1-FX16",
-        "oam": "1405",
-        "tr069": "1353",
-        "hsi": "1905"
-    },
-    {
-        "nama_olt": "JKB-GPVOD-OLT1-FX16",
-        "oam": "1594",
-        "tr069": "1639",
-        "hsi": "1213"
-    },
-    {
-        "nama_olt": "JKB-GSBOD-OLT1-FX16",
-        "oam": "1467",
-        "tr069": "1326",
-        "hsi": "1926"
-    },
-    {
-        "nama_olt": "JKB-KSBOD-OLT1-FX16",
-        "oam": "1406",
-        "tr069": "1640",
-        "hsi": "1906"
-    },
-    {
-        "nama_olt": "JKB-MKJOD-OLT1-FX16",
-        "oam": "1474",
-        "tr069": "1374",
-        "hsi": "1967"
-    },
-    {
-        "nama_olt": "JKB-MTPB1-OLT1-FX16",
-        "oam": "1712",
-        "tr069": "1711",
-        "hsi": "1713"
-    },
-    {
-        "nama_olt": "JKB-PRGOD-OLT1-FX16",
-        "oam": "1404",
-        "tr069": "1304",
-        "hsi": "1904"
-    },
-    {
-        "nama_olt": "JKB-PSAH1-OLT1-FX16",
-        "oam": "1495",
-        "tr069": "1394",
-        "hsi": "1988"
-    },
-    {
-        "nama_olt": "JKB-SLPB1-OLT1-FX16",
-        "oam": "1412",
-        "tr069": "1411",
-        "hsi": "1908"
-    },
-    {
-        "nama_olt": "JKB-SSC6A-OLT1-FX16",
-        "oam": "1512",
-        "tr069": "1301",
-        "hsi": "1901"
-    },
-    {
-        "nama_olt": "JKP-AEMB0-OLT1-FX16",
-        "oam": "1590",
-        "tr069": "1630",
-        "hsi": "1209"
-    },
-    {
-        "nama_olt": "JKP-GPRB1-OLT1-FX16",
-        "oam": "1532",
-        "tr069": "1322",
-        "hsi": "1922"
-    },
-    {
-        "nama_olt": "JKP-KPITB-OLT1-FX16",
-        "oam": "1484",
-        "tr069": "1383",
-        "hsi": "1976"
-    },
-    {
-        "nama_olt": "JKP-THAP9-OLT1-FX16",
-        "oam": "1586",
-        "tr069": "1626",
-        "hsi": "1205"
-    },
-    {
-        "nama_olt": "JKS-ESSSB-OLT1-FX16",
-        "oam": "1416",
-        "tr069": "1311",
-        "hsi": "1911"
-    },
-    {
-        "nama_olt": "JKS-KBGCB-OLT1-FX16",
-        "oam": "1422",
-        "tr069": "1421",
-        "hsi": "1423"
-    },
-    {
-        "nama_olt": "JKS-KLCCB-OLT1-FX16",
-        "oam": "1522",
-        "tr069": "1310",
-        "hsi": "1523"
-    },
-    {
-        "nama_olt": "JKS-PCBB2-OLT1-FX16",
-        "oam": "1420",
-        "tr069": "1315",
-        "hsi": "1915"
-    },
-    {
-        "nama_olt": "JKS-PKVB1-OLT1-FX16",
-        "oam": "1456",
-        "tr069": "1316",
-        "hsi": "1916"
-    },
-    {
-        "nama_olt": "JKS-WPIB2-OLT1-FX16",
-        "oam": "1465",
-        "tr069": "1363",
-        "hsi": "1959"
-    },
-    {
-        "nama_olt": "JKT-CERB1-OLT1-FX16",
-        "oam": "1584",
-        "tr069": "1620",
-        "hsi": "1944"
-    },
-    {
-        "nama_olt": "JKT-EPABA-OLT1-FX16",
-        "oam": "1457",
-        "tr069": "1354",
-        "hsi": "1951"
-    },
-    {
-        "nama_olt": "JKT-THRGF-OLT1-FX16",
-        "oam": "1429",
-        "tr069": "1324",
-        "hsi": "1924"
-    },
-    {
-        "nama_olt": "JKU-ALPC3-OLT1-FX16",
-        "oam": "1485",
-        "tr069": "1384",
-        "hsi": "1978"
-    },
-    {
-        "nama_olt": "JKU-GBPGM-OLT1-FX16",
-        "oam": "1552",
-        "tr069": "1328",
-        "hsi": "1928"
-    },
-    {
-        "nama_olt": "JKU-GERP3-OLT1-FX16",
-        "oam": "1435",
-        "tr069": "1330",
-        "hsi": "1930"
-    },
-    {
-        "nama_olt": "JKU-GMRB1-OLT1-FX16",
-        "oam": "1432",
-        "tr069": "1327",
-        "hsi": "1553"
-    },
-    {
-        "nama_olt": "JKU-MMROD-OLT1-FX16",
-        "oam": "1488",
-        "tr069": "1387",
-        "hsi": "1981"
-    },
-    {
-        "nama_olt": "JKU-MPRB1-OLT1-FX16",
-        "oam": "1426",
-        "tr069": "1321",
-        "hsi": "1533"
-    },
-    {
-        "nama_olt": "JKU-MTS16-OLT1-FX16",
-        "oam": "1434",
-        "tr069": "1329",
-        "hsi": "1929"
-    },
-    {
-        "nama_olt": "BGR-KWCOD-OLT1-FX16",
-        "oam": "1496",
-        "tr069": "1395",
-        "hsi": "1989"
-    },
-    {
-        "nama_olt": "BGR-VNIOD-OLT1-FX16",
-        "oam": "1589",
-        "tr069": "1629",
-        "hsi": "1208"
-    },
-    {
-        "nama_olt": "BKS-CKIOD-OLT1-FX16",
-        "oam": "1591",
-        "tr069": "1636",
-        "hsi": "1210"
-    },
-    {
-        "nama_olt": "BKS-GDHB2-OLT1-FX16",
-        "oam": "1482",
-        "tr069": "1381",
-        "hsi": "1974"
-    },
-    {
-        "nama_olt": "BKS-GHROD-OLT1-FX16",
-        "oam": "1401",
-        "tr069": "1339",
-        "hsi": "1994"
-    },
-    {
-        "nama_olt": "BKS-GKLB2-OLT1-FX16",
-        "oam": "1443",
-        "tr069": "1338",
-        "hsi": "1938"
-    },
-    {
-        "nama_olt": "BKS-MJYOD-OLT1-DF16",
-        "oam": "802",
-        "tr069": "502",
-        "hsi": "202"
-    },
-    {
-        "nama_olt": "BKS-MJYOD-OLT2-DF16",
-        "oam": "802",
-        "tr069": "502",
-        "hsi": "202"
-    },
-    {
-        "nama_olt": "BKS-MTB3A-OLT1-FX16",
-        "oam": "1458",
-        "tr069": "1355",
-        "hsi": "1952"
-    },
-    {
-        "nama_olt": "BKS-TGIOD-OLT1-FX16",
-        "oam": "1408",
-        "tr069": "1340",
-        "hsi": "1995"
-    },
-    {
-        "nama_olt": "BKS-THBOD-OLT1-FX16",
-        "oam": "1592",
-        "tr069": "1637",
-        "hsi": "1211"
-    },
-    {
-        "nama_olt": "BKS-TWAOD-OLT1-FX16",
-        "oam": "585",
-        "tr069": "485",
-        "hsi": "385"
-    },
-    {
-        "nama_olt": "DPK-CBVRT-OLT1-FX16",
-        "oam": "1430",
-        "tr069": "1325",
-        "hsi": "1925"
-    },
-    {
-        "nama_olt": "DPK-GDAOD-OLT1-FX16",
-        "oam": "1490",
-        "tr069": "1389",
-        "hsi": "1983"
-    },
-    {
-        "nama_olt": "SBY-BDL01-OLT1-FX16",
-        "oam": "1452",
-        "tr069": "1349",
-        "hsi": "1947"
-    },
-    {
-        "nama_olt": "SBY-CHT01-OLT1-FX16",
-        "oam": "1451",
-        "tr069": "1348",
-        "hsi": "1946"
-    },
-    {
-        "nama_olt": "SBY-COSB1-OLT1-FX16",
-        "oam": "1471",
-        "tr069": "1371",
-        "hsi": "1964"
-    },
-    {
-        "nama_olt": "SBY-CTLOD-OLT1-FX16",
-        "oam": "1462",
-        "tr069": "1343",
-        "hsi": "1956"
-    },
-    {
-        "nama_olt": "SBY-GPA09-OLT1-FX16",
-        "oam": "1499",
-        "tr069": "1398",
-        "hsi": "1992"
-    },
-    {
-        "nama_olt": "SBY-KYN04-OLT1-FX16",
-        "oam": "1449",
-        "tr069": "1346",
-        "hsi": "1823"
-    },
-    {
-        "nama_olt": "SBY-NWNOD-OLT1-FX16",
-        "oam": "1453",
-        "tr069": "1350",
-        "hsi": "1948"
-    },
-    {
-        "nama_olt": "SBY-PAV01-OLT1-FX16",
-        "oam": "1470",
-        "tr069": "1370",
-        "hsi": "1963"
-    },
-    {
-        "nama_olt": "BTL-BTROD-OLT1-FX16",
-        "oam": "1446",
-        "tr069": "1607",
-        "hsi": "1999"
-    },
-    {
-        "nama_olt": "BTL-SDDOD-OLT1-FX16",
-        "oam": "1446",
-        "tr069": "903",
-        "hsi": "803"
-    },
-    {
-        "nama_olt": "SMN-AMT01-OLT1-FX16",
-        "oam": "1446",
-        "tr069": "1607",
-        "hsi": "1999"
-    },
-    {
-        "nama_olt": "SMN-CCROD-OLT1-FX8",
-        "oam": "1446",
-        "tr069": "902",
-        "hsi": "844"
-    },
-    {
-        "nama_olt": "SMN-GGIOD-OLT1-FX8",
-        "oam": "1446",
-        "tr069": "902",
-        "hsi": "1999"
-    },
-    {
-        "nama_olt": "SMN-MMIOD-OLT1-FX8",
-        "oam": "1446",
-        "tr069": "902",
-        "hsi": "846"
-    },
-    {
-        "nama_olt": "BDG-DMKOD-OLT1-FX16",
-        "oam": "1491",
-        "tr069": "1390",
-        "hsi": "1984"
-    },
-    {
-        "nama_olt": "BDG-EMR01-OLT1-FX16",
-        "oam": "1612",
-        "tr069": "1611",
-        "hsi": "1613"
-    },
-    {
-        "nama_olt": "BDG-EPRB1-OLT1-FX16",
-        "oam": "1595",
-        "tr069": "1646",
-        "hsi": "1214"
-    },
-    {
-        "nama_olt": "BDG-GCEOD-OLT1-FX16",
-        "oam": "1602",
-        "tr069": "1601",
-        "hsi": "1603"
-    },
-    {
-        "nama_olt": "BDG-PHYB1-OLT1-FX16",
-        "oam": "1622",
-        "tr069": "1621",
-        "hsi": "1623"
-    },
-    {
-        "nama_olt": "BDG-SDS02-OLT1-FX16",
-        "oam": "1400",
-        "tr069": "1399",
-        "hsi": "1993"
-    },
-    {
-        "nama_olt": "BDG-TKIOD-OLT1-FX16",
-        "oam": "1588",
-        "tr069": "1605",
-        "hsi": "1207"
-    },
-    {
-        "nama_olt": "SMG-BKJOD-OLT1-FX16",
-        "oam": "1493",
-        "tr069": "1392",
-        "hsi": "1986"
-    },
-    {
-        "nama_olt": "SMG-CLAGF-OLT1-FX16",
-        "oam": "1459",
-        "tr069": "1356",
-        "hsi": "1953"
-    },
-    {
-        "nama_olt": "SMG-KDP01-OLT1-FX16",
-        "oam": "1475",
-        "tr069": "1375",
-        "hsi": "1968"
-    },
-    {
-        "nama_olt": "SGN-SGTOD-OLT1-FX16",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "SGN-SGWOD-OLT1-FX16",
-        "oam": "581",
-        "tr069": "481",
-        "hsi": "381"
-    },
-    {
-        "nama_olt": "BGR-DPGOD-OLT1-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-DPGOD-OLT2-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-GRPOD-OLT1-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-GRPOD-OLT2-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-GWEOD-OLT1-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-GWEOD-OLT2-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-TRCOD-OLT1-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-TRCOD-OLT2-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-IKDOD-OLT1-DF16",
-        "oam": "579",
-        "tr069": "479",
-        "hsi": "379"
-    },
-    {
-        "nama_olt": "BGR-IKDOD-OLT2-DF16",
-        "oam": "579",
-        "tr069": "479",
-        "hsi": "379"
-    },
-    {
-        "nama_olt": "BGR-IKDO2-OLT1-DF16",
-        "oam": "579",
-        "tr069": "479",
-        "hsi": "379"
-    },
-    {
-        "nama_olt": "BGR-IKDO2-OLT2-DF16",
-        "oam": "579",
-        "tr069": "479",
-        "hsi": "379"
-    },
-    {
-        "nama_olt": "BGR-PKNOD-OLT1-DF16",
-        "oam": "543",
-        "tr069": "443",
-        "hsi": "343"
-    },
-    {
-        "nama_olt": "BGR-PCPOD-OLT1-DF16",
-        "oam": "564",
-        "tr069": "464",
-        "hsi": "364"
-    },
-    {
-        "nama_olt": "BGR-BPNOD-OLT1-DF16",
-        "oam": "579",
-        "tr069": "479",
-        "hsi": "379"
-    },
-    {
-        "nama_olt": "BGR-BPNOD-OLT2-DF16",
-        "oam": "579",
-        "tr069": "479",
-        "hsi": "379"
-    },
-    {
-        "nama_olt": "BGR-GASOD-OLT1-DF16",
-        "oam": "584",
-        "tr069": "484",
-        "hsi": "384"
-    },
-    {
-        "nama_olt": "BGR-GASOD-OLT2-DF16",
-        "oam": "584",
-        "tr069": "484",
-        "hsi": "384"
-    },
-    {
-        "nama_olt": "BGR-DMAOD-OLT1-DF16",
-        "oam": "584",
-        "tr069": "484",
-        "hsi": "384"
-    },
-    {
-        "nama_olt": "BGR-DMAOD-OLT2-DF16",
-        "oam": "584",
-        "tr069": "484",
-        "hsi": "384"
-    },
-    {
-        "nama_olt": "BKS-CMGOD-OLT1-DF16",
-        "oam": "1482",
-        "tr069": "1381",
-        "hsi": "1974"
-    },
-    {
-        "nama_olt": "BKS-CMGOD-OLT2-DF16",
-        "oam": "1482",
-        "tr069": "1381",
-        "hsi": "1974"
-    },
-    {
-        "nama_olt": "BKS-GHIOD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-GHIOD-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-GP2OD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-GP2OD-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-KTMOD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-KTMOD-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-GTROD-OLT1-DF16",
-        "oam": "559",
-        "tr069": "459",
-        "hsi": "359"
-    },
-    {
-        "nama_olt": "BKS-GTROD-OLT2-DF16",
-        "oam": "559",
-        "tr069": "459",
-        "hsi": "359"
-    },
-    {
-        "nama_olt": "BKS-CBTOD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-CBTOD-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-CBT04-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-WSR29-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-WSR29-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-PSNOD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-PSNOD-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-PPROD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-PPROD-OLT2-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-PPWOD-OLT1-DF16",
-        "oam": "566",
-        "tr069": "466",
-        "hsi": "366"
-    },
-    {
-        "nama_olt": "BKS-PCDOD-OLT1-DF16",
-        "oam": "531",
-        "tr069": "410",
-        "hsi": "310"
-    },
-    {
-        "nama_olt": "BKS-PCDOD-OLT2-DF16",
-        "oam": "531",
-        "tr069": "410",
-        "hsi": "310"
-    },
-    {
-        "nama_olt": "BKS-BCMOD-OLT1-DF16",
-        "oam": "586",
-        "tr069": "486",
-        "hsi": "386"
-    },
-    {
-        "nama_olt": "BKS-BCMOD-OLT2-DF16",
-        "oam": "586",
-        "tr069": "486",
-        "hsi": "386"
-    },
-    {
-        "nama_olt": "BKS-AFIOD-OLT1-DF16",
-        "oam": "586",
-        "tr069": "486",
-        "hsi": "386"
-    },
-    {
-        "nama_olt": "BKS-AFIOD-OLT2-DF16",
-        "oam": "586",
-        "tr069": "486",
-        "hsi": "386"
-    },
-    {
-        "nama_olt": "DPK-BDHOD-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-BDHOD-OLT2-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-SWPOD-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-SWPOD-OLT2-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-GBAOD-OLT1-DF16",
-        "oam": "540",
-        "tr069": "440",
-        "hsi": "340"
-    },
-    {
-        "nama_olt": "DPK-GBAOD-OLT2-DF16",
-        "oam": "540",
-        "tr069": "440",
-        "hsi": "340"
-    },
-    {
-        "nama_olt": "DPK-MPG03-OLT1-DF16",
-        "oam": "540",
-        "tr069": "440",
-        "hsi": "340"
-    },
-    {
-        "nama_olt": "DPK-MPG03-OLT2-DF16",
-        "oam": "540",
-        "tr069": "440",
-        "hsi": "340"
-    },
-    {
-        "nama_olt": "DPK-GRLOD-OLT1-DF16",
-        "oam": "540",
-        "tr069": "440",
-        "hsi": "340"
-    },
-    {
-        "nama_olt": "DPK-GRLOD-OLT2-DF16",
-        "oam": "540",
-        "tr069": "440",
-        "hsi": "340"
-    },
-    {
-        "nama_olt": "DPK-KDGOD-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-SWGOD-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-VRIOD-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-VRIOD-OLT2-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-BDH08-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-BDH08-OLT2-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "DPK-FMLOD-OLT1-DF16",
-        "oam": "578",
-        "tr069": "478",
-        "hsi": "378"
-    },
-    {
-        "nama_olt": "JKS-CDDOD-OLT1-DF16",
-        "oam": "548",
-        "tr069": "448",
-        "hsi": "348"
-    },
-    {
-        "nama_olt": "SDA-SKTOD-OLT1-DF16",
-        "oam": "503",
-        "tr069": "403",
-        "hsi": "303"
-    },
-    {
-        "nama_olt": "SDA-SKTOD-OLT2-DF16",
-        "oam": "503",
-        "tr069": "403",
-        "hsi": "303"
-    },
-    {
-        "nama_olt": "SDA-TWSOD-OLT1-DF16",
-        "oam": "505",
-        "tr069": "405",
-        "hsi": "305"
-    },
-    {
-        "nama_olt": "SDA-TWSOD-OLT2-DF16",
-        "oam": "505",
-        "tr069": "405",
-        "hsi": "305"
-    },
-    {
-        "nama_olt": "BDG-BJROD-OLT1-DF16",
-        "oam": "562",
-        "tr069": "462",
-        "hsi": "362"
-    },
-    {
-        "nama_olt": "BDG-BJROD-OLT2-DF16",
-        "oam": "562",
-        "tr069": "462",
-        "hsi": "362"
-    },
-    {
-        "nama_olt": "BDG-MKSOD-OLT1-DF16",
-        "oam": "521",
-        "tr069": "421",
-        "hsi": "321"
-    },
-    {
-        "nama_olt": "BDG-MKSOD-OLT2-DF16",
-        "oam": "521",
-        "tr069": "421",
-        "hsi": "321"
-    },
-    {
-        "nama_olt": "BDG-KCAOD-OLT1-DF16",
-        "oam": "521",
-        "tr069": "421",
-        "hsi": "321"
-    },
-    {
-        "nama_olt": "BDG-MLYOD-OLT1-DF16",
-        "oam": "567",
-        "tr069": "467",
-        "hsi": "367"
-    },
-    {
-        "nama_olt": "SMD-PGTOD-OLT1-DF16",
-        "oam": "587",
-        "tr069": "487",
-        "hsi": "387"
-    },
-    {
-        "nama_olt": "KLN-BTHOD-OLT1-DF16",
-        "oam": "557",
-        "tr069": "457",
-        "hsi": "357"
-    },
-    {
-        "nama_olt": "KLN-BTHOD-OLT2-DF16",
-        "oam": "557",
-        "tr069": "457",
-        "hsi": "357"
-    },
-    {
-        "nama_olt": "KLN-BNROD-OLT1-DF16",
-        "oam": "558",
-        "tr069": "458",
-        "hsi": "358"
-    },
-    {
-        "nama_olt": "KLN-BNROD-OLT2-DF16",
-        "oam": "558",
-        "tr069": "458",
-        "hsi": "358"
-    },
-    {
-        "nama_olt": "KLN-DLGOD-OLT1-DF16",
-        "oam": "558",
-        "tr069": "458",
-        "hsi": "358"
-    },
-    {
-        "nama_olt": "KLN-DLGOD-OLT2-DF16",
-        "oam": "558",
-        "tr069": "458",
-        "hsi": "358"
-    },
-    {
-        "nama_olt": "KLN-KPJOD-OLT1-DF16",
-        "oam": "558",
-        "tr069": "458",
-        "hsi": "358"
-    },
-    {
-        "nama_olt": "KLN-KPJOD-OLT2-DF16",
-        "oam": "558",
-        "tr069": "458",
-        "hsi": "358"
-    },
-    {
-        "nama_olt": "KRG-BJNOD-OLT1-DF16",
-        "oam": "574",
-        "tr069": "474",
-        "hsi": "374"
-    },
-    {
-        "nama_olt": "KRG-BJNOD-OLT2-DF16",
-        "oam": "574",
-        "tr069": "474",
-        "hsi": "374"
-    },
-    {
-        "nama_olt": "KRG-LLGOD-OLT1-TJ14",
-        "oam": "574",
-        "tr069": "474",
-        "hsi": "374"
-    },
-    {
-        "nama_olt": "KRG-LLGOD-OLT2-TJ14",
-        "oam": "574",
-        "tr069": "474",
-        "hsi": "374"
-    },
-    {
-        "nama_olt": "PWT-WTMOD-OLT1-TJ14",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "PWT-WTMOD-OLT2-TJ14",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "PWT-KRJOD-OLT1-TJ14",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "PWT-KRJOD-OLT2-TJ14",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "PWT-AWNOD-OLT1-TJ14",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "PWT-AWNOD-OLT2-TJ14",
-        "oam": "582",
-        "tr069": "482",
-        "hsi": "382"
-    },
-    {
-        "nama_olt": "SKT-GDKOD-OLT1-DF16",
-        "oam": "573",
-        "tr069": "473",
-        "hsi": "373"
-    },
-    {
-        "nama_olt": "SKT-GDKOD-OLT2-DF16",
-        "oam": "573",
-        "tr069": "473",
-        "hsi": "373"
-    },
-    {
-        "nama_olt": "SKT-JBR25-OLT1-DF16",
-        "oam": "573",
-        "tr069": "473",
-        "hsi": "373"
-    },
-    {
-        "nama_olt": "SKT-JBR25-OLT2-DF16",
-        "oam": "573",
-        "tr069": "473",
-        "hsi": "373"
-    },
-    {
-        "nama_olt": "SKT-KTNOD-OLT1-DF16",
-        "oam": "576",
-        "tr069": "480",
-        "hsi": "376"
-    },
-    {
-        "nama_olt": "SKT-KTNOD-OLT2-DF16",
-        "oam": "576",
-        "tr069": "480",
-        "hsi": "376"
-    },
-    {
-        "nama_olt": "SKT-MJOOD-OLT1-DF16",
-        "oam": "576",
-        "tr069": "480",
-        "hsi": "376"
-    },
-    {
-        "nama_olt": "SKT-MJOOD-OLT2-DF16",
-        "oam": "576",
-        "tr069": "480",
-        "hsi": "376"
-    },
-    {
-        "nama_olt": "SMG-WLPOD-OLT1-DF16",
-        "oam": "560",
-        "tr069": "460",
-        "hsi": "360"
-    },
-    {
-        "nama_olt": "SMG-WLPOD-OLT2-DF16",
-        "oam": "560",
-        "tr069": "460",
-        "hsi": "360"
-    },
-    {
-        "nama_olt": "SMG-MRGOD-OLT1-DF16",
-        "oam": "1493",
-        "tr069": "1392",
-        "hsi": "1986"
-    },
-    {
-        "nama_olt": "SMG-MRGOD-OLT2-DF16",
-        "oam": "1493",
-        "tr069": "1392",
-        "hsi": "1986"
-    },
-    {
-        "nama_olt": "SMN-PDTOD-OLT1-DF16",
-        "oam": "563",
-        "tr069": "463",
-        "hsi": "363"
-    },
-    {
-        "nama_olt": "BTL-KLPOD-OLT1-DF16",
-        "oam": "1446",
-        "tr069": "1607",
-        "hsi": "1999"
-    }
+  {
+    "nama_olt": "Pilih OLT",
+    "oam": "",
+    "tr069": "",
+    "hsi": ""
+  },
+  {
+    "nama_olt": "TNG-ARUT4-OLT1-FX16",
+    "oam": "1441",
+    "tr069": "1336",
+    "hsi": "1936"
+  },
+  {
+    "nama_olt": "TNG-BJ4OD-OLT1-FX16",
+    "oam": "1580",
+    "tr069": "1616",
+    "hsi": "1920"
+  },
+  {
+    "nama_olt": "TNG-BSDOD-OLT1-FX16",
+    "oam": "1494",
+    "tr069": "1393",
+    "hsi": "1987"
+  },
+  {
+    "nama_olt": "TNG-CLGB1-OLT1-FX16",
+    "oam": "1596",
+    "tr069": "1647",
+    "hsi": "1215"
+  },
+  {
+    "nama_olt": "TNG-EPSGF-OLT1-FX16",
+    "oam": "1438",
+    "tr069": "1333",
+    "hsi": "1933"
+  },
+  {
+    "nama_olt": "TNG-GACB1-OLT1-FX16",
+    "oam": "1418",
+    "tr069": "1313",
+    "hsi": "1913"
+  },
+  {
+    "nama_olt": "TNG-GDTOD-OLT1-FX16",
+    "oam": "1593",
+    "tr069": "1638",
+    "hsi": "1212"
+  },
+  {
+    "nama_olt": "TNG-GWSOD-OLT1-FX16",
+    "oam": "1487",
+    "tr069": "1386",
+    "hsi": "1980"
+  },
+  {
+    "nama_olt": "TNG-MDNB1-OLT1-FX16",
+    "oam": "1562",
+    "tr069": "1561",
+    "hsi": "1563"
+  },
+  {
+    "nama_olt": "TNG-PIDOD-OLT1-FX16",
+    "oam": "1587",
+    "tr069": "1627",
+    "hsi": "1206"
+  },
+  {
+    "nama_olt": "TNG-PMPOD-OLT1-FX16",
+    "oam": "1403",
+    "tr069": "1303",
+    "hsi": "1903"
+  },
+  {
+    "nama_olt": "TNG-PVLGF-OLT1-FX16",
+    "oam": "1440",
+    "tr069": "1335",
+    "hsi": "1935"
+  },
+  {
+    "nama_olt": "TNG-SRHOD-OLT1-FX16",
+    "oam": "1581",
+    "tr069": "1617",
+    "hsi": "1921"
+  },
+  {
+    "nama_olt": "TNG-TLBOD-OLT1-FX16",
+    "oam": "1598",
+    "tr069": "1649",
+    "hsi": "1217"
+  },
+  {
+    "nama_olt": "TNG-TMGOD-OLT1-FX16",
+    "oam": "1497",
+    "tr069": "1396",
+    "hsi": "1990"
+  },
+  {
+    "nama_olt": "TNG-TPGOD-OLT1-FX16",
+    "oam": "1597",
+    "tr069": "1648",
+    "hsi": "1216"
+  },
+  {
+    "nama_olt": "TNG-TRIOD-OLT1-FX16",
+    "oam": "1481",
+    "tr069": "1380",
+    "hsi": "1973"
+  },
+  {
+    "nama_olt": "BKS-RWAOD-OLT1-FX16",
+    "oam": "531",
+    "tr069": "410",
+    "hsi": "310"
+  },
+  {
+    "nama_olt": "JKB-CPKSD-OLT1-FX16",
+    "oam": "1512",
+    "tr069": "1300",
+    "hsi": "1513"
+  },
+  {
+    "nama_olt": "JKB-CRAO1-OLT1-FX16",
+    "oam": "1486",
+    "tr069": "1385",
+    "hsi": "1979"
+  },
+  {
+    "nama_olt": "JKB-GCCB2-OLT1-FX16",
+    "oam": "1405",
+    "tr069": "1353",
+    "hsi": "1905"
+  },
+  {
+    "nama_olt": "JKB-GPVOD-OLT1-FX16",
+    "oam": "1594",
+    "tr069": "1639",
+    "hsi": "1213"
+  },
+  {
+    "nama_olt": "JKB-GSBOD-OLT1-FX16",
+    "oam": "1467",
+    "tr069": "1326",
+    "hsi": "1926"
+  },
+  {
+    "nama_olt": "JKB-KSBOD-OLT1-FX16",
+    "oam": "1406",
+    "tr069": "1640",
+    "hsi": "1906"
+  },
+  {
+    "nama_olt": "JKB-MKJOD-OLT1-FX16",
+    "oam": "1474",
+    "tr069": "1374",
+    "hsi": "1967"
+  },
+  {
+    "nama_olt": "JKB-MTPB1-OLT1-FX16",
+    "oam": "1712",
+    "tr069": "1711",
+    "hsi": "1713"
+  },
+  {
+    "nama_olt": "JKB-PRGOD-OLT1-FX16",
+    "oam": "1404",
+    "tr069": "1304",
+    "hsi": "1904"
+  },
+  {
+    "nama_olt": "JKB-PSAH1-OLT1-FX16",
+    "oam": "1495",
+    "tr069": "1394",
+    "hsi": "1988"
+  },
+  {
+    "nama_olt": "JKB-SLPB1-OLT1-FX16",
+    "oam": "1412",
+    "tr069": "1411",
+    "hsi": "1908"
+  },
+  {
+    "nama_olt": "JKB-SSC6A-OLT1-FX16",
+    "oam": "1512",
+    "tr069": "1301",
+    "hsi": "1901"
+  },
+  {
+    "nama_olt": "JKP-AEMB0-OLT1-FX16",
+    "oam": "1590",
+    "tr069": "1630",
+    "hsi": "1209"
+  },
+  {
+    "nama_olt": "JKP-GPRB1-OLT1-FX16",
+    "oam": "1532",
+    "tr069": "1322",
+    "hsi": "1922"
+  },
+  {
+    "nama_olt": "JKP-KPITB-OLT1-FX16",
+    "oam": "1484",
+    "tr069": "1383",
+    "hsi": "1976"
+  },
+  {
+    "nama_olt": "JKP-THAP9-OLT1-FX16",
+    "oam": "1586",
+    "tr069": "1626",
+    "hsi": "1205"
+  },
+  {
+    "nama_olt": "JKS-ESSSB-OLT1-FX16",
+    "oam": "1416",
+    "tr069": "1311",
+    "hsi": "1911"
+  },
+  {
+    "nama_olt": "JKS-KBGCB-OLT1-FX16",
+    "oam": "1422",
+    "tr069": "1421",
+    "hsi": "1423"
+  },
+  {
+    "nama_olt": "JKS-KLCCB-OLT1-FX16",
+    "oam": "1522",
+    "tr069": "1310",
+    "hsi": "1523"
+  },
+  {
+    "nama_olt": "JKS-PCBB2-OLT1-FX16",
+    "oam": "1420",
+    "tr069": "1315",
+    "hsi": "1915"
+  },
+  {
+    "nama_olt": "JKS-PKVB1-OLT1-FX16",
+    "oam": "1456",
+    "tr069": "1316",
+    "hsi": "1916"
+  },
+  {
+    "nama_olt": "JKS-WPIB2-OLT1-FX16",
+    "oam": "1465",
+    "tr069": "1363",
+    "hsi": "1959"
+  },
+  {
+    "nama_olt": "JKS-PKU08-OLT1-FX16",
+    "oam": "1483",
+    "tr069": "1383",
+    "hsi": "1976"
+  },
+  {
+    "nama_olt": "JKT-CERB1-OLT1-FX16",
+    "oam": "1584",
+    "tr069": "1620",
+    "hsi": "1944"
+  },
+  {
+    "nama_olt": "JKT-EPABA-OLT1-FX16",
+    "oam": "1457",
+    "tr069": "1354",
+    "hsi": "1951"
+  },
+  {
+    "nama_olt": "JKT-THRGF-OLT1-FX16",
+    "oam": "1429",
+    "tr069": "1324",
+    "hsi": "1924"
+  },
+  {
+    "nama_olt": "JKT-DRSOD-OLT4-FX04",
+    "oam": "4087",
+    "tr069": "3827",
+    "hsi": "3427"
+  },
+  {
+    "nama_olt": "JKU-ALPC3-OLT1-FX16",
+    "oam": "1485",
+    "tr069": "1384",
+    "hsi": "1978"
+  },
+  {
+    "nama_olt": "JKU-GBPGM-OLT1-FX16",
+    "oam": "1552",
+    "tr069": "1328",
+    "hsi": "1928"
+  },
+  {
+    "nama_olt": "JKU-GERP3-OLT1-FX16",
+    "oam": "1435",
+    "tr069": "1330",
+    "hsi": "1930"
+  },
+  {
+    "nama_olt": "JKU-GMRB1-OLT1-FX16",
+    "oam": "1432",
+    "tr069": "1327",
+    "hsi": "1553"
+  },
+  {
+    "nama_olt": "JKU-MMROD-OLT1-FX16",
+    "oam": "1488",
+    "tr069": "1387",
+    "hsi": "1981"
+  },
+  {
+    "nama_olt": "JKU-MPRB1-OLT1-FX16",
+    "oam": "1426",
+    "tr069": "1321",
+    "hsi": "1533"
+  },
+  {
+    "nama_olt": "JKU-MTS16-OLT1-FX16",
+    "oam": "1434",
+    "tr069": "1329",
+    "hsi": "1929"
+  },
+  {
+    "nama_olt": "BGR-KWCOD-OLT1-FX16",
+    "oam": "1496",
+    "tr069": "1395",
+    "hsi": "1989"
+  },
+  {
+    "nama_olt": "BGR-VNIOD-OLT1-FX16",
+    "oam": "1589",
+    "tr069": "1629",
+    "hsi": "1208"
+  },
+  {
+    "nama_olt": "BGR-PKSOD-OLT1-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-PKSOD-OLT2-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BKS-CKIOD-OLT1-FX16",
+    "oam": "1591",
+    "tr069": "1636",
+    "hsi": "1210"
+  },
+  {
+    "nama_olt": "BKS-GDHB2-OLT1-FX16",
+    "oam": "1482",
+    "tr069": "1381",
+    "hsi": "1974"
+  },
+  {
+    "nama_olt": "BKS-GHROD-OLT1-FX16",
+    "oam": "1401",
+    "tr069": "1339",
+    "hsi": "1994"
+  },
+  {
+    "nama_olt": "BKS-GKLB2-OLT1-FX16",
+    "oam": "1443",
+    "tr069": "1338",
+    "hsi": "1938"
+  },
+  {
+    "nama_olt": "BKS-MJYOD-OLT1-DF16",
+    "oam": "802",
+    "tr069": "502",
+    "hsi": "202"
+  },
+  {
+    "nama_olt": "BKS-MJYOD-OLT2-DF16",
+    "oam": "802",
+    "tr069": "502",
+    "hsi": "202"
+  },
+  {
+    "nama_olt": "BKS-MTB3A-OLT1-FX16",
+    "oam": "1458",
+    "tr069": "1355",
+    "hsi": "1952"
+  },
+  {
+    "nama_olt": "BKS-TGIOD-OLT1-FX16",
+    "oam": "1408",
+    "tr069": "1340",
+    "hsi": "1995"
+  },
+  {
+    "nama_olt": "BKS-THBOD-OLT1-FX16",
+    "oam": "1592",
+    "tr069": "1637",
+    "hsi": "1211"
+  },
+  {
+    "nama_olt": "BKS-TWAOD-OLT1-FX16",
+    "oam": "585",
+    "tr069": "485",
+    "hsi": "385"
+  },
+  {
+    "nama_olt": "DPK-CBVRT-OLT1-FX16",
+    "oam": "1430",
+    "tr069": "1325",
+    "hsi": "1925"
+  },
+  {
+    "nama_olt": "DPK-GDAOD-OLT1-FX16",
+    "oam": "1490",
+    "tr069": "1389",
+    "hsi": "1983"
+  },
+  {
+    "nama_olt": "SBY-BDL01-OLT1-FX16",
+    "oam": "1452",
+    "tr069": "1349",
+    "hsi": "1947"
+  },
+  {
+    "nama_olt": "SBY-CHT01-OLT1-FX16",
+    "oam": "1451",
+    "tr069": "1348",
+    "hsi": "1946"
+  },
+  {
+    "nama_olt": "SBY-COSB1-OLT1-FX16",
+    "oam": "1471",
+    "tr069": "1371",
+    "hsi": "1964"
+  },
+  {
+    "nama_olt": "SBY-CTLOD-OLT1-FX16",
+    "oam": "1462",
+    "tr069": "1343",
+    "hsi": "1956"
+  },
+  {
+    "nama_olt": "SBY-GPA09-OLT1-FX16",
+    "oam": "1499",
+    "tr069": "1398",
+    "hsi": "1992"
+  },
+  {
+    "nama_olt": "SBY-KYN04-OLT1-FX16",
+    "oam": "1449",
+    "tr069": "1346",
+    "hsi": "1823"
+  },
+  {
+    "nama_olt": "SBY-NWNOD-OLT1-FX16",
+    "oam": "1453",
+    "tr069": "1350",
+    "hsi": "1948"
+  },
+  {
+    "nama_olt": "SBY-PAV01-OLT1-FX16",
+    "oam": "1470",
+    "tr069": "1370",
+    "hsi": "1963"
+  },
+  {
+    "nama_olt": "BTL-BTROD-OLT1-FX16",
+    "oam": "1446",
+    "tr069": "902",
+    "hsi": "802"
+  },
+  {
+    "nama_olt": "BTL-SDDOD-OLT1-FX16",
+    "oam": "1446",
+    "tr069": "903",
+    "hsi": "803"
+  },
+  {
+    "nama_olt": "SMN-AMT01-OLT1-FX16",
+    "oam": "1446",
+    "tr069": "1607",
+    "hsi": "1999"
+  },
+  {
+    "nama_olt": "SMN-CCROD-OLT1-FX08",
+    "oam": "1446",
+    "tr069": "1607",
+    "hsi": "1999"
+  },
+  {
+    "nama_olt": "SMN-GGIOD-OLT1-FX08",
+    "oam": "1446",
+    "tr069": "1607",
+    "hsi": "1999"
+  },
+  {
+    "nama_olt": "SMN-MMIOD-OLT1-FX08",
+    "oam": "1446",
+    "tr069": "1607",
+    "hsi": "1999"
+  },
+  {
+    "nama_olt": "BDG-DMKOD-OLT1-FX16",
+    "oam": "1491",
+    "tr069": "1390",
+    "hsi": "1984"
+  },
+  {
+    "nama_olt": "BDG-ATP02-OLT1-FX16",
+    "oam": "1491",
+    "tr069": "3845",
+    "hsi": "3445"
+  },
+  {
+    "nama_olt": "BDG-ATP02-OLT2-FX16",
+    "oam": "1491",
+    "tr069": "3842",
+    "hsi": "3442"
+  },
+  {
+    "nama_olt": "BDG-EMR01-OLT1-FX16",
+    "oam": "1612",
+    "tr069": "1611",
+    "hsi": "1613"
+  },
+  {
+    "nama_olt": "BDG-EPRB1-OLT1-FX16",
+    "oam": "1595",
+    "tr069": "1646",
+    "hsi": "1214"
+  },
+  {
+    "nama_olt": "BDG-GCEOD-OLT1-FX16",
+    "oam": "1602",
+    "tr069": "1601",
+    "hsi": "1603"
+  },
+  {
+    "nama_olt": "BDG-PHYB1-OLT1-FX16",
+    "oam": "1622",
+    "tr069": "1621",
+    "hsi": "1623"
+  },
+  {
+    "nama_olt": "BDG-SDS02-OLT1-FX16",
+    "oam": "1400",
+    "tr069": "1399",
+    "hsi": "1993"
+  },
+  {
+    "nama_olt": "BDG-TKIOD-OLT1-FX16",
+    "oam": "1588",
+    "tr069": "1605",
+    "hsi": "1207"
+  },
+  {
+    "nama_olt": "SMG-BKJOD-OLT1-FX16",
+    "oam": "1493",
+    "tr069": "1392",
+    "hsi": "1986"
+  },
+  {
+    "nama_olt": "SMG-CLAGF-OLT1-FX16",
+    "oam": "1459",
+    "tr069": "1356",
+    "hsi": "1953"
+  },
+  {
+    "nama_olt": "SMG-KDP01-OLT1-FX16",
+    "oam": "1475",
+    "tr069": "1375",
+    "hsi": "1968"
+  },
+  {
+    "nama_olt": "SGN-SGTOD-OLT1-FX16",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "SGN-SGWOD-OLT1-FX16",
+    "oam": "581",
+    "tr069": "481",
+    "hsi": "381"
+  },
+  {
+    "nama_olt": "BGR-DPGOD-OLT1-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-DPGOD-OLT2-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-GRPOD-OLT1-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-GRPOD-OLT2-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-GWEOD-OLT1-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-GWEOD-OLT2-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-TRCOD-OLT1-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-TRCOD-OLT2-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-IKDOD-OLT1-DF16",
+    "oam": "579",
+    "tr069": "479",
+    "hsi": "379"
+  },
+  {
+    "nama_olt": "BGR-IKDOD-OLT2-DF16",
+    "oam": "579",
+    "tr069": "479",
+    "hsi": "379"
+  },
+  {
+    "nama_olt": "BGR-IKDO2-OLT1-DF16",
+    "oam": "579",
+    "tr069": "479",
+    "hsi": "379"
+  },
+  {
+    "nama_olt": "BGR-IKDO2-OLT2-DF16",
+    "oam": "579",
+    "tr069": "479",
+    "hsi": "379"
+  },
+  {
+    "nama_olt": "BGR-PKNOD-OLT1-DF16",
+    "oam": "543",
+    "tr069": "443",
+    "hsi": "343"
+  },
+  {
+    "nama_olt": "BGR-PCPOD-OLT1-DF16",
+    "oam": "564",
+    "tr069": "464",
+    "hsi": "364"
+  },
+  {
+    "nama_olt": "BGR-BPNOD-OLT1-DF16",
+    "oam": "579",
+    "tr069": "479",
+    "hsi": "379"
+  },
+  {
+    "nama_olt": "BGR-BPNOD-OLT2-DF16",
+    "oam": "579",
+    "tr069": "479",
+    "hsi": "379"
+  },
+  {
+    "nama_olt": "BGR-GASOD-OLT1-DF16",
+    "oam": "584",
+    "tr069": "484",
+    "hsi": "384"
+  },
+  {
+    "nama_olt": "BGR-GASOD-OLT2-DF16",
+    "oam": "584",
+    "tr069": "484",
+    "hsi": "384"
+  },
+  {
+    "nama_olt": "BGR-DMAOD-OLT1-DF16",
+    "oam": "584",
+    "tr069": "484",
+    "hsi": "384"
+  },
+  {
+    "nama_olt": "BGR-DMAOD-OLT2-DF16",
+    "oam": "584",
+    "tr069": "484",
+    "hsi": "384"
+  },
+  {
+    "nama_olt": "BKS-CMGOD-OLT1-DF16",
+    "oam": "1482",
+    "tr069": "1381",
+    "hsi": "1974"
+  },
+  {
+    "nama_olt": "BKS-CMGOD-OLT2-DF16",
+    "oam": "1482",
+    "tr069": "1381",
+    "hsi": "1974"
+  },
+  {
+    "nama_olt": "BKS-GHIOD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-GHIOD-OLT2-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-GP2OD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-GP2OD-OLT2-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-KTMOD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-KTMOD-OLT2-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-GTROD-OLT1-DF16",
+    "oam": "559",
+    "tr069": "459",
+    "hsi": "359"
+  },
+  {
+    "nama_olt": "BKS-GTROD-OLT2-DF16",
+    "oam": "559",
+    "tr069": "459",
+    "hsi": "359"
+  },
+  {
+    "nama_olt": "BKS-CBTOD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "938",
+    "hsi": "838"
+  },
+  {
+    "nama_olt": "BKS-CBTOD-OLT2-DF16",
+    "oam": "566",
+    "tr069": "938",
+    "hsi": "838"
+  },
+  {
+    "nama_olt": "BKS-CBT04-OLT1-DF16",
+    "oam": "566",
+    "tr069": "938",
+    "hsi": "838"
+  },
+  {
+    "nama_olt": "BKS-WSR29-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-WSR29-OLT2-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-PSNOD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-PSNOD-OLT2-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-PPROD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-PPROD-OLT2-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-PPWOD-OLT1-DF16",
+    "oam": "566",
+    "tr069": "466",
+    "hsi": "366"
+  },
+  {
+    "nama_olt": "BKS-PCDOD-OLT1-DF16",
+    "oam": "531",
+    "tr069": "410",
+    "hsi": "310"
+  },
+  {
+    "nama_olt": "BKS-PCDOD-OLT2-DF16",
+    "oam": "531",
+    "tr069": "410",
+    "hsi": "310"
+  },
+  {
+    "nama_olt": "BKS-BCMOD-OLT1-DF16",
+    "oam": "586",
+    "tr069": "486",
+    "hsi": "386"
+  },
+  {
+    "nama_olt": "BKS-BCMOD-OLT2-DF16",
+    "oam": "586",
+    "tr069": "486",
+    "hsi": "386"
+  },
+  {
+    "nama_olt": "BKS-AFIOD-OLT1-DF16",
+    "oam": "586",
+    "tr069": "486",
+    "hsi": "386"
+  },
+  {
+    "nama_olt": "BKS-AFIOD-OLT2-DF16",
+    "oam": "586",
+    "tr069": "486",
+    "hsi": "386"
+  },
+  {
+    "nama_olt": "DPK-BDHOD-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-BDHOD-OLT2-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-SWPOD-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-SWPOD-OLT2-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-GBAOD-OLT1-DF16",
+    "oam": "540",
+    "tr069": "440",
+    "hsi": "340"
+  },
+  {
+    "nama_olt": "DPK-GBAOD-OLT2-DF16",
+    "oam": "540",
+    "tr069": "440",
+    "hsi": "340"
+  },
+  {
+    "nama_olt": "DPK-MPG03-OLT1-DF16",
+    "oam": "540",
+    "tr069": "440",
+    "hsi": "340"
+  },
+  {
+    "nama_olt": "DPK-MPG03-OLT2-DF16",
+    "oam": "540",
+    "tr069": "440",
+    "hsi": "340"
+  },
+  {
+    "nama_olt": "DPK-GRLOD-OLT1-DF16",
+    "oam": "540",
+    "tr069": "440",
+    "hsi": "340"
+  },
+  {
+    "nama_olt": "DPK-GRLOD-OLT2-DF16",
+    "oam": "540",
+    "tr069": "440",
+    "hsi": "340"
+  },
+  {
+    "nama_olt": "DPK-KDGOD-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-SWGOD-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-VRIOD-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-VRIOD-OLT2-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-BDH08-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-BDH08-OLT2-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "DPK-FMLOD-OLT1-DF16",
+    "oam": "578",
+    "tr069": "478",
+    "hsi": "378"
+  },
+  {
+    "nama_olt": "JKS-CDDOD-OLT1-DF16",
+    "oam": "548",
+    "tr069": "448",
+    "hsi": "348"
+  },
+  {
+    "nama_olt": "SDA-SKTOD-OLT1-DF16",
+    "oam": "503",
+    "tr069": "403",
+    "hsi": "303"
+  },
+  {
+    "nama_olt": "SDA-SKTOD-OLT2-DF16",
+    "oam": "503",
+    "tr069": "403",
+    "hsi": "303"
+  },
+  {
+    "nama_olt": "SDA-TWSOD-OLT1-DF16",
+    "oam": "505",
+    "tr069": "405",
+    "hsi": "305"
+  },
+  {
+    "nama_olt": "SDA-TWSOD-OLT2-DF16",
+    "oam": "505",
+    "tr069": "405",
+    "hsi": "305"
+  },
+  {
+    "nama_olt": "BDG-BJROD-OLT1-DF16",
+    "oam": "562",
+    "tr069": "462",
+    "hsi": "362"
+  },
+  {
+    "nama_olt": "BDG-BJROD-OLT2-DF16",
+    "oam": "562",
+    "tr069": "462",
+    "hsi": "362"
+  },
+  {
+    "nama_olt": "BDG-MKSOD-OLT1-DF16",
+    "oam": "521",
+    "tr069": "421",
+    "hsi": "321"
+  },
+  {
+    "nama_olt": "BDG-MKSOD-OLT2-DF16",
+    "oam": "521",
+    "tr069": "421",
+    "hsi": "321"
+  },
+  {
+    "nama_olt": "BDG-KCAOD-OLT1-DF16",
+    "oam": "521",
+    "tr069": "421",
+    "hsi": "321"
+  },
+  {
+    "nama_olt": "BDG-MLYOD-OLT1-DF16",
+    "oam": "567",
+    "tr069": "467",
+    "hsi": "367"
+  },
+  {
+    "nama_olt": "SMD-PGTOD-OLT1-DF16",
+    "oam": "587",
+    "tr069": "487",
+    "hsi": "387"
+  },
+  {
+    "nama_olt": "KLN-BTHOD-OLT1-DF16",
+    "oam": "557",
+    "tr069": "457",
+    "hsi": "357"
+  },
+  {
+    "nama_olt": "KLN-BTHOD-OLT2-DF16",
+    "oam": "557",
+    "tr069": "457",
+    "hsi": "357"
+  },
+  {
+    "nama_olt": "KLN-BNROD-OLT1-DF16",
+    "oam": "558",
+    "tr069": "458",
+    "hsi": "358"
+  },
+  {
+    "nama_olt": "KLN-BNROD-OLT2-DF16",
+    "oam": "558",
+    "tr069": "458",
+    "hsi": "358"
+  },
+  {
+    "nama_olt": "KLN-DLGOD-OLT1-DF16",
+    "oam": "558",
+    "tr069": "458",
+    "hsi": "358"
+  },
+  {
+    "nama_olt": "KLN-DLGOD-OLT2-DF16",
+    "oam": "558",
+    "tr069": "458",
+    "hsi": "358"
+  },
+  {
+    "nama_olt": "KLN-KPJOD-OLT1-DF16",
+    "oam": "558",
+    "tr069": "458",
+    "hsi": "358"
+  },
+  {
+    "nama_olt": "KLN-KPJOD-OLT2-DF16",
+    "oam": "558",
+    "tr069": "458",
+    "hsi": "358"
+  },
+  {
+    "nama_olt": "KRG-BJNOD-OLT1-DF16",
+    "oam": "574",
+    "tr069": "474",
+    "hsi": "374"
+  },
+  {
+    "nama_olt": "KRG-BJNOD-OLT2-DF16",
+    "oam": "574",
+    "tr069": "474",
+    "hsi": "374"
+  },
+  {
+    "nama_olt": "KRG-LLGOD-OLT1-TJ14",
+    "oam": "574",
+    "tr069": "474",
+    "hsi": "374"
+  },
+  {
+    "nama_olt": "KRG-LLGOD-OLT2-TJ14",
+    "oam": "574",
+    "tr069": "474",
+    "hsi": "374"
+  },
+  {
+    "nama_olt": "PWT-WTMOD-OLT1-TJ14",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "PWT-WTMOD-OLT2-TJ14",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "PWT-KRJOD-OLT1-TJ14",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "PWT-KRJOD-OLT2-TJ14",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "PWT-AWNOD-OLT1-TJ14",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "PWT-AWNOD-OLT2-TJ14",
+    "oam": "582",
+    "tr069": "482",
+    "hsi": "382"
+  },
+  {
+    "nama_olt": "SKT-GDKOD-OLT1-DF16",
+    "oam": "573",
+    "tr069": "473",
+    "hsi": "373"
+  },
+  {
+    "nama_olt": "SKT-GDKOD-OLT2-DF16",
+    "oam": "573",
+    "tr069": "473",
+    "hsi": "373"
+  },
+  {
+    "nama_olt": "SKT-JBR25-OLT1-DF16",
+    "oam": "573",
+    "tr069": "473",
+    "hsi": "373"
+  },
+  {
+    "nama_olt": "SKT-JBR25-OLT2-DF16",
+    "oam": "573",
+    "tr069": "473",
+    "hsi": "373"
+  },
+  {
+    "nama_olt": "SKT-KTNOD-OLT1-DF16",
+    "oam": "576",
+    "tr069": "480",
+    "hsi": "376"
+  },
+  {
+    "nama_olt": "SKT-KTNOD-OLT2-DF16",
+    "oam": "576",
+    "tr069": "480",
+    "hsi": "376"
+  },
+  {
+    "nama_olt": "SKT-MJOOD-OLT1-DF16",
+    "oam": "576",
+    "tr069": "480",
+    "hsi": "376"
+  },
+  {
+    "nama_olt": "SKT-MJOOD-OLT2-DF16",
+    "oam": "576",
+    "tr069": "480",
+    "hsi": "376"
+  },
+  {
+    "nama_olt": "SMG-WLPOD-OLT1-DF16",
+    "oam": "560",
+    "tr069": "460",
+    "hsi": "360"
+  },
+  {
+    "nama_olt": "SMG-WLPOD-OLT2-DF16",
+    "oam": "560",
+    "tr069": "460",
+    "hsi": "360"
+  },
+  {
+    "nama_olt": "SMG-MRGOD-OLT1-DF16",
+    "oam": "1493",
+    "tr069": "1392",
+    "hsi": "1986"
+  },
+  {
+    "nama_olt": "SMG-MRGOD-OLT2-DF16",
+    "oam": "1493",
+    "tr069": "1392",
+    "hsi": "1986"
+  },
+  {
+    "nama_olt": "SMN-PDTOD-OLT1-DF16",
+    "oam": "563",
+    "tr069": "463",
+    "hsi": "363"
+  },
+  {
+    "nama_olt": "BTL-KLPOD-OLT1-DF16",
+    "oam": "1446",
+    "tr069": "1607",
+    "hsi": "1999"
+  }
 ]
